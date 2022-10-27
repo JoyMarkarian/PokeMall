@@ -6,7 +6,7 @@ function OneProduct() {
           <img
             alt="pokemon"
             src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
-            className="img-fluid"
+            className="img-fluid pulse"
           />
         </div>
         <div className="col-6 d-flex flex-column justify-content-between">
@@ -16,7 +16,7 @@ function OneProduct() {
           </div>
           <div className="d-flex flex-column align-items-center">
             <p className="fw-bold">price: 5.99$</p>
-            <button type="button" className="btn btn-warning">
+            <button type="button" className="btn btn-warning shadow">
               add to cart
             </button>
           </div>
