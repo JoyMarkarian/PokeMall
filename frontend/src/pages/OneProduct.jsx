@@ -1,21 +1,25 @@
 function OneProduct() {
   return (
     <div className="container">
-      <div className="d-flex flex-column justify-content-around">
-        <h1>Bulbizarre</h1>
-        <p className="fw-bold">ID: 001</p>
-      </div>
-      <div className="d-flex justify-content-around align-items-end">
-        <img
-          alt="pokemon"
-          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
-          className="img-fluid"
-        />
-        <div className="d-flex flex-column align-items-center">
-          <p className="fw-bold">price: 5.99$</p>
-          <button type="button" className="btn btn-danger">
-            ajouter au panier
-          </button>
+      <div className="row">
+        <div className="col-6">
+          <img
+            alt="pokemon"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+            className="img-fluid"
+          />
+        </div>
+        <div className="col-6">
+          <div className="d-flex flex-column justify-content-around">
+            <h1 className="text-center">Bulbizarre</h1>
+            <p className="fw-bold text-center">ID: 001</p>
+          </div>
+          <div className="d-flex flex-column align-items-center">
+            <p className="fw-bold">price: 5.99$</p>
+            <button type="button" className="btn btn-warning">
+              ajouter au panier
+            </button>
+          </div>
         </div>
       </div>
       <div className="mt-4">
