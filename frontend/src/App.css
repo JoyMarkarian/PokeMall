@@ -1,4 +1,8 @@
 .stats {
   width: 35px;
-  height: 35px
+  height: 35px;
+}
+
+.importantText {
+  font-family: "Oswald";
 }
