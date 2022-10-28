@@ -1,7 +1,7 @@
 function OneProduct() {
   return (
     <div className="container divPrincipale">
-      <div className="row">
+      <div className="row pt-5">
         <div className="col-6 text-center">
           <img
             alt="pokemon"
