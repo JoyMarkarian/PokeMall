@@ -4,5 +4,13 @@
 }
 
 .importantText {
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
+}
+
+.textRegular {
+  font-family: "Noto Sans", sans-serif;
+}
+
+.divPrincipale {
+  background-color: #EDF1EF;
 }
