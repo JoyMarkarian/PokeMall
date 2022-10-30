@@ -1,3 +1,5 @@
+import React from "react";
+
 import AllProducts from "@pages/AllProducts";
 import Basket from "@pages/Basket";
 import Home from "@pages/Home";
@@ -11,26 +13,29 @@ import pokemons from "@services/pokemons";
 import "./App.css";
 
 function App() {
+  const [id, setId] = React.useState(5);
   return (
     <div className="App">
       <Header />
       <Home pokemons={pokemons} />
       <AllProducts />
       <OneProduct
-        index={pokemons[0].pokedex_index}
-        name={pokemons[0].name}
-        image={pokemons[0].url}
-        life={pokemons[0].hp}
-        attack={pokemons[0].stats.attack}
-        defense={pokemons[0].stats.defense}
-        specialAttack={pokemons[0].stats.special_attack}
-        specialDefense={pokemons[0].stats.special_defence}
-        speed={pokemons[0].stats.speed}
-        primaryType={pokemons[0].type.primary_type}
-        secondaryType={pokemons[0].type.secondary_type}
-        price={pokemons[0].price}
-        firstAbility={pokemons[0].ability.first_ability}
-        secondAbility={pokemons[0].ability.seconde_ability}
+        index={pokemons[id].pokedex_index}
+        name={pokemons[id].name}
+        image={pokemons[id].url}
+        life={pokemons[id].hp}
+        attack={pokemons[id].stats.attack}
+        defense={pokemons[id].stats.defense}
+        specialAttack={pokemons[id].stats.special_attack}
+        specialDefense={pokemons[id].stats.special_defence}
+        speed={pokemons[id].stats.speed}
+        primaryType={pokemons[id].type.primary_type}
+        secondaryType={pokemons[id].type.secondary_type}
+        price={pokemons[id].price}
+        firstAbility={pokemons[id].ability.first_ability}
+        secondAbility={pokemons[id].ability.seconde_ability}
+        id={id}
+        setId={setId}
       />
       <Basket />
       <Footer />
