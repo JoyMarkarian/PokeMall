@@ -13,7 +13,7 @@ import pokemons from "@services/pokemons";
 import "./App.css";
 
 function App() {
-  const [id, setId] = React.useState(5);
+  const [id, setId] = React.useState(0);
   return (
     <div className="App">
       <Header />

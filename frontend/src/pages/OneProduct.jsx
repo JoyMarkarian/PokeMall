@@ -14,9 +14,38 @@ function OneProduct(props) {
     specialDefense,
     speed,
     life,
+    id,
+    setId,
   } = props;
   return (
     <div className="container-fluid divPrincipale">
+      <div className="d-flex justify-content-around">
+        {index === 1 ? (
+          ""
+        ) : (
+          <button
+            type="button"
+            className="btn"
+            onClick={() => setId(id - 1)}
+            onKeyDown={() => setId(id - 1)}
+          >
+            {" "}
+            &larr; previous
+          </button>
+        )}
+        {index === 51 ? (
+          ""
+        ) : (
+          <button
+            type="button"
+            className="btn btn-sm"
+            onClick={() => setId(id + 1)}
+            onKeyDown={() => setId(id + 1)}
+          >
+            next &rarr;
+          </button>
+        )}
+      </div>
       <div className="row pt-5">
         <div className="col-6 text-center">
           <img alt="pokemon" src={image} className="img-fluid pulse" />

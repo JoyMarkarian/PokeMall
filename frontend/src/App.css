@@ -12,5 +12,11 @@
 }
 
 .divPrincipale {
-  background-color: #EDF1EF;
+  background-color: #edf1ef;
+}
+
+.forwNextIcons {
+  height: 3rem;
+  width: 3rem;
+  padding: 0;
 }
