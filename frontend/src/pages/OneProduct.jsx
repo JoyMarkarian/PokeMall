@@ -1,4 +1,8 @@
 function OneProduct(props) {
+  function letter(word) {
+    const result = `${word}`.charAt(0).toUpperCase() + `${word}`.slice(1).toLowerCase();
+    return result;
+  }
   const {
     image,
     name,
@@ -52,7 +56,7 @@ function OneProduct(props) {
         </div>
         <div className="col-6 d-flex flex-column justify-content-between">
           <div className="d-flex flex-column justify-content-around">
-            <h1 className="text-center importantText">{name}</h1>
+            <h1 className="text-center importantText">{letter(name)}</h1>
             <p className="fw-bold text-center importantText">ID: 00{index}</p>
           </div>
           <div className="d-flex flex-column align-items-center">
@@ -73,13 +77,13 @@ function OneProduct(props) {
             <li
               className={`list-group-item text-center w-25 me-1 textRegular ${primaryType}`}
             >
-              {primaryType}
+              {letter(primaryType)}
             </li>
             {secondaryType ? (
               <li
                 className={`list-group-item text-center w-25 ms-1 textRegular ${secondaryType}`}
               >
-                {secondaryType}
+                {letter(secondaryType)}
               </li>
             ) : (
               ""
@@ -92,13 +96,13 @@ function OneProduct(props) {
             <li
               className={`list-group-item w-25 p-0 text-center pt-2 pb-2 me-1 textRegular ${primaryType}`}
             >
-              {firstAbility}
+              {letter(firstAbility)}
             </li>
             {secondAbility ? (
               <li
                 className={`list-group-item w-25 p-0 text-center pt-2 pb-2 ms-1 textRegular ${primaryType}`}
               >
-                {secondAbility}
+                {letter(secondAbility)}
               </li>
             ) : (
               ""
