@@ -70,23 +70,39 @@ function OneProduct(props) {
         <div className="mt-4 col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
           <h2 className="text-center importantText">Type</h2>
           <ul className=" list-group list-group-horizontal justify-content-center">
-            <li className="list-group-item text-center w-25 bg-success text-white me-1 textRegular">
+            <li
+              className={`list-group-item text-center w-25 me-1 textRegular ${primaryType}`}
+            >
               {primaryType}
             </li>
-            <li className="list-group-item text-center w-25 bg-warning ms-1 textRegular">
-              {secondaryType}
-            </li>
+            {secondaryType ? (
+              <li
+                className={`list-group-item text-center w-25 ms-1 textRegular ${secondaryType}`}
+              >
+                {secondaryType}
+              </li>
+            ) : (
+              ""
+            )}
           </ul>
         </div>
         <div className="mt-4 col-xs-12 col-sm-12 col-md-6 col-lg-6">
           <h2 className="text-center importantText">Abilities</h2>
           <ul className="list-group list-group-horizontal justify-content-center">
-            <li className="list-group-item w-25 p-0 text-center pt-2 pb-2 bg-success text-white me-1 textRegular">
+            <li
+              className={`list-group-item w-25 p-0 text-center pt-2 pb-2 me-1 textRegular ${primaryType}`}
+            >
               {firstAbility}
             </li>
-            <li className="list-group-item w-25 p-0 text-center pt-2 pb-2 bg-success text-white ms-1 textRegular">
-              {secondAbility}
-            </li>
+            {secondAbility ? (
+              <li
+                className={`list-group-item w-25 p-0 text-center pt-2 pb-2 ms-1 textRegular ${primaryType}`}
+              >
+                {secondAbility}
+              </li>
+            ) : (
+              ""
+            )}
           </ul>
         </div>
       </div>

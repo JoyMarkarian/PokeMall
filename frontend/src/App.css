@@ -15,8 +15,52 @@
   background-color: #edf1ef;
 }
 
-.forwNextIcons {
-  height: 3rem;
-  width: 3rem;
-  padding: 0;
+.grass {
+  background-color: #4dad5b;
+  color: white;
+}
+
+.poison {
+  background-color: #855ac9;
+  color: white;
+}
+
+.fire {
+  background-color: #ee6b2f;
+  color: white;
+}
+
+.normal {
+  background-color: #919191;
+  color: white;
+}
+
+.water {
+  background-color: #30a7d7;
+  color: white;
+}
+
+.bug {
+  background-color: #9fe346;
+  color: white;
+}
+
+.flying {
+  background-color: #be8ce2;
+  color: white;
+}
+
+.electric {
+  background-color: #e6bc2f;
+  color: white;
+}
+
+.ground {
+  background-color: #cc891e;
+  color: white;
+}
+
+.fairy {
+  background-color: #e7a4dc;
+  color: white;
 }
