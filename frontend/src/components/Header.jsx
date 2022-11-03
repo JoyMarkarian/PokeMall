@@ -15,7 +15,7 @@ export default function Header() {
     <header>
       <div className="d-flex align-items-center justify-content-around ">
         <div className="p-2 d-none d-md-block">
-          <img src={Logo} className="img-fluid" alt="logo" />
+          <img src={Logo} className="img-fluid w-75 h-75" alt="logo" />
         </div>
         <div className="p-2 d-md-none">
           <button
@@ -42,7 +42,7 @@ export default function Header() {
         </div>
         <div className="p-2 text-center">
           <button type="button" className="border-0">
-            <img src={Panier} className="img-fluid" alt="panier" />
+            <img src={Panier} className="img-fluid w-50 h-75" alt="panier" />
           </button>
         </div>
       </div>
