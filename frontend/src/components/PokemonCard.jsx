@@ -12,8 +12,8 @@ function PokemonCard({ pokemon }) {
       </div>
       <h2 className="card-title">{pokemon.name}</h2>
       {/* <p className="card-text">{pokemon.pokedex_index}</p> */}
-      <h3 className="card-text">Price : {pokemon.price}</h3>
-      <button type="button" className="btn btn-primary">
+      <h3 className="card-text">Price : {pokemon.price}$</h3>
+      <button type="button" className="btn btn-success">
         Show product
       </button>
     </div>

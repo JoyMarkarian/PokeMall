@@ -1,5 +1,20 @@
+.allProducts {
+  background-color: #EDF1EF;
+  /* font-family: Noto-sans ; */
+}
 .cardPokemon {
   width: 50%;
+  border-color: #2A4F3F;
+  padding: 1%;
+}
+
+.btn {
+background-color: #2A4F3F;
+border-color : #2A4F3F;
+}
+
+.form-floating {
+  margin-left: 6%;
 }
 
 .form-select {
@@ -11,10 +26,16 @@
 }
 @media screen and (min-width : 769px) {
   .cardPokemon {
-    width : 25%;
+    width : 20%;
   } 
 
   .form-select {
   width: 15%;
   }
+
+  .cardPokemon {
+    margin: 1%;
+  }
 }
+
+
