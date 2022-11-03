@@ -109,13 +109,13 @@ function OneProduct(props) {
             )}
             <ul className=" list-group list-group-horizontal-sm justify-content-center align-items-center">
               <li
-                className={`list-group-item text-center mb-1 me-1 textRegular typeAbilities ${primaryType}`}
+                className={`list-group-item text-center mb-1 me-1 rounded textRegular typeAbilities ${primaryType}`}
               >
                 {letter(primaryType)}
               </li>
               {secondaryType ? (
                 <li
-                  className={`list-group-item text-center mb-1 me-1 textRegular typeAbilities ${secondaryType}`}
+                  className={`list-group-item text-center mb-1 me-1 textRegular rounded typeAbilities ${secondaryType}`}
                 >
                   {letter(secondaryType)}
                 </li>
@@ -132,13 +132,13 @@ function OneProduct(props) {
             )}
             <ul className="list-group list-group-horizontal-sm justify-content-center align-items-center">
               <li
-                className={`list-group-item p-0 mb-1 me-1 text-center pt-2 pb-2 textRegular typeAbilities ${primaryType}`}
+                className={`list-group-item p-0 mb-1 me-1 text-center pt-2 pb-2 rounded textRegular typeAbilities ${primaryType}`}
               >
                 {letter(firstAbility)}
               </li>
               {secondAbility ? (
                 <li
-                  className={`list-group-item p-0  mb-1 me-1 text-center pt-2 pb-2 textRegular typeAbilities ${primaryType}`}
+                  className={`list-group-item p-0  mb-1 me-1 text-center pt-2 pb-2 rounded textRegular typeAbilities ${primaryType}`}
                 >
                   {letter(secondAbility)}
                 </li>
