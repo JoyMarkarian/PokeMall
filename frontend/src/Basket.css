@@ -1,6 +1,9 @@
 .btn {
   background-color: #2a4f3f;
-  border-color: #2a4f3f;
+}
+
+.btn-link {
+  color: #198754;
 }
 
 .body-basket,
@@ -17,17 +20,16 @@
   display: none;
 }
 
-@media (min-width: 768px) {
-  .quantity {
-    display: flex;
-    width: 7rem;
-  }
+.btn-delete {
+  background-color: transparent;
+  border-radius: none;
+}
 
+@media (min-width: 768px) {
   .row {
     display: flex;
     justify-content: center;
-    width: 100%;
-    background-color: #2a4f3f;
+    align-items: center;
   }
 
   .row .img-basket {
@@ -38,18 +40,13 @@
     display: none;
   }
 
-  .valide-basket {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-  }
-
   .basket-dekstop {
     display: flex;
   }
-
-  .product-basket {
-    display: flex;
-    justify-content: space-between;
+  .summary-oder,
+  .valide-basket {
+    display: block;
+    justify-content: center;
+    align-items: center;
   }
 }
