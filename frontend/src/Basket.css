@@ -2,3 +2,54 @@
   background-color: #2a4f3f;
   border-color: #2a4f3f;
 }
+
+.body-basket,
+.card {
+  background-color: #edf1ef;
+}
+
+.form-check-input:checked {
+  background-color: #2a4f3f;
+  border-color: #2a4f3f;
+}
+
+.valide-basket {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .quantity {
+    display: flex;
+    width: 7rem;
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #2a4f3f;
+  }
+
+  .row .img-basket {
+    display: flex;
+  }
+
+  .valide-basket-mobile {
+    display: none;
+  }
+
+  .valide-basket {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+
+  .basket-dekstop {
+    display: flex;
+  }
+
+  .product-basket {
+    display: flex;
+    justify-content: space-between;
+  }
+}
