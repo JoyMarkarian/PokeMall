@@ -102,7 +102,11 @@ function OneProduct(props) {
         </div>
         <div className="col-6 col-sm-6 col-md-5 col-lg-5 d-flex flex-column justify-content-around">
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-            <h2 className="text-center importantText">Type</h2>
+            {secondaryType ? (
+              <h2 className="text-center importantText">Types</h2>
+            ) : (
+              <h2 className="text-center importantText">Type</h2>
+            )}
             <ul className=" list-group list-group-horizontal-sm justify-content-center align-items-center">
               <li
                 className={`list-group-item text-center mb-1 me-1 textRegular typeAbilities ${primaryType}`}
@@ -121,7 +125,11 @@ function OneProduct(props) {
             </ul>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h2 className="text-center importantText">Abilities</h2>
+            {secondAbility ? (
+              <h2 className="text-center importantText">Abilities</h2>
+            ) : (
+              <h2 className="text-center importantText">Ability</h2>
+            )}
             <ul className="list-group list-group-horizontal-sm justify-content-center align-items-center">
               <li
                 className={`list-group-item p-0 mb-1 me-1 text-center pt-2 pb-2 textRegular typeAbilities ${primaryType}`}
