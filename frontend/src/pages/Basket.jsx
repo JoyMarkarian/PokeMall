@@ -7,14 +7,14 @@ function Basket() {
         <h1 className="text-center">Your Basket</h1>
         <div className="basket-dekstop">
           <div className="row w-100">
-            <div className="img-basket col-6 my-3">
+            <div className="img-basket col-6 my-5">
               <img
                 src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
                 className="img float-start img-fluid"
                 alt="pokemon"
               />
             </div>
-            <div className="basket-top col-6 my-3 md">
+            <div className="basket-top col-6">
               <h2 className="my-5">Bulbizar</h2>
               <div className="product-basket w-30 d-inline-block justify-content-center md">
                 <label htmlFor="floatingSelect">Quantity</label>
@@ -57,8 +57,8 @@ function Basket() {
               <h3 className="my-3">Price : 10$</h3>
             </div>
           </div>
-          <div className="card w-50">
-            <div className="summary-order container md">
+          <div className="card-summary card md-w-50">
+            <div className="summary-order container">
               <br />
               <h1 className="text-center">Summary of orders</h1>
               <div className="d-flex mb-3 p-2 w-100 justify-content-between my-3">
