@@ -1,6 +1,7 @@
 function OneProduct(props) {
   function letter(word) {
-    const result = `${word}`.charAt(0).toUpperCase() + `${word}`.slice(1).toLowerCase();
+    const result =
+      `${word}`.charAt(0).toUpperCase() + `${word}`.slice(1).toLowerCase();
     return result;
   }
   const {
@@ -25,7 +26,7 @@ function OneProduct(props) {
     <div className="container-fluid divPrincipale">
       <div className="d-flex justify-content-around">
         {index === 1 ? (
-          ""
+          " "
         ) : (
           <button
             type="button"
@@ -57,10 +58,10 @@ function OneProduct(props) {
         <div className="col-6 d-flex flex-column justify-content-between">
           <div className="d-flex flex-column justify-content-around">
             <h1 className="text-center importantText">{letter(name)}</h1>
-            <p className="fw-bold text-center importantText">ID: 00{index}</p>
+            <p className="fw-bold text-center importantText">ID : 00{index}</p>
           </div>
           <div className="d-flex flex-column align-items-center">
-            <p className="fw-bold textRegular">price: {price}$</p>
+            <p className="fw-bold textRegular">Price : {price}$</p>
             <button
               type="button"
               className="btn btn-warning shadow textRegular"
