@@ -42,7 +42,7 @@ export default function Header() {
         </div>
         <div className="p-2 text-center">
           <button type="button" className="border-0">
-            <img src={Panier} className="img-fluid w-50 h-75" alt="panier" />
+            <img src={Panier} className="img-fluid w-auto" alt="panier" />
           </button>
         </div>
       </div>
