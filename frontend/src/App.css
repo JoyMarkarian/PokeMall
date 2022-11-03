@@ -1,6 +1,10 @@
 .stats {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
+}
+
+.oneProductStats {
+  line-height: 45px;
 }
 
 .importantText {
@@ -13,6 +17,20 @@
 
 .divPrincipale {
   background-color: #edf1ef;
+}
+
+.imageOneProduct {
+  max-height: 183px;
+  max-width: 100%;
+}
+
+.typeAbilities {
+  width: 70%;
+}
+
+.oneProductBtn {
+  height: 35px;
+  width: 35px;
 }
 
 .grass {
@@ -63,4 +81,10 @@
 .fairy {
   background-color: #e7a4dc;
   color: white;
+}
+
+@media screen and (min-width: 800px) {
+  .typeAbilities {
+    width: 40%;
+  }
 }
