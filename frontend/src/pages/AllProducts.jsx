@@ -1,5 +1,11 @@
+import PokemonList from "../components/PokemonList";
+
 function AllProducts() {
-  return <div>AllProducts</div>;
+  return (
+    <div>
+      <PokemonList />
+    </div>
+  );
 }
 
 export default AllProducts;
