@@ -1160,7 +1160,7 @@ const pokemons = [
     fourth_move: "fly",
   },
   {
-    pokedex_index: 41,
+    pokedex_index: 43,
     name: "oddish",
     url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/43.svg",
     experience: 64,
@@ -1480,4 +1480,4 @@ const pokemons = [
   },
 ];
 
-export default pokemons;
+module.exports = pokemons;
