@@ -1,3 +1,7 @@
+.body-basket {
+  font-family: "Noto Sans";
+}
+
 .btn {
   background-color: #2a4f3f;
 }
@@ -42,6 +46,7 @@
   .basket-dekstop {
     display: flex;
   }
+
   .summary-oder,
   .valide-basket {
     display: block;
