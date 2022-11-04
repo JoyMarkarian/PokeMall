@@ -1,11 +1,13 @@
-import "./Header.css";
 import { useState } from "react";
+
 import NavbarWindow from "./Navbar/NavbarWindow";
 import Burger from "../assets/Burger.png";
 import Panier from "../assets/panier.png";
 import Logo from "../assets/logo.png";
 
-export default function Header() {
+import "./Header.css";
+
+export default function Header({ setPage }) {
   const [toggleMenuMobile, settoggleMenuMobile] = useState(false);
 
   const toggleMenuMobileButton = () => {
@@ -28,7 +30,7 @@ export default function Header() {
         </div>
         <div className="p-2 d-none d-md-block ">
           <div className="Navbar">
-            <NavbarWindow />
+            <NavbarWindow setPage={setPage} />
           </div>
         </div>
         <div className="p-2">
@@ -41,7 +43,11 @@ export default function Header() {
           />
         </div>
         <div className="p-2 text-center">
-          <button type="button" className="border-0">
+          <button
+            type="button"
+            className="border-0"
+            onClick={() => setPage({ path: "Basket", index: null })}
+          >
             <img src={Panier} className="img-fluid w-auto" alt="panier" />
           </button>
         </div>
@@ -50,7 +56,7 @@ export default function Header() {
         <ul className="navbarMobile d-md-none zindex-modal">
           <li className="navbarMobile bg-primary">
             <div className="Navbar">
-              <NavbarWindow />
+              <NavbarWindow setPage={setPage} />
             </div>
           </li>
         </ul>

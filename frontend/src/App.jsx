@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import AllProducts from "@pages/AllProducts";
 import Basket from "@pages/Basket";
 import Home from "@pages/Home";
@@ -11,14 +13,16 @@ import pokemons from "@services/pokemons";
 import "./App.css";
 
 function App() {
+  const [page, setPage] = useState({ path: "Home", index: null });
+
   return (
     <div className="App">
-      <Header />
-      <Home pokemons={pokemons} />
-      <AllProducts />
+      <Header setPage={setPage} />
+      {page.path === "Home" ? <Home pokemons={pokemons} /> : ""}
+      {page.path === "Products" ? <AllProducts /> : ""}
       <OneProduct />
-      <Basket />
-      <Footer />
+      {page.path === "Basket" ? <Basket /> : ""}
+      {page.path === "Contact" ? <Footer /> : ""}
     </div>
   );
 }
