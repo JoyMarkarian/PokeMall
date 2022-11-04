@@ -30,14 +30,6 @@
 }
 
 @media (min-width: 768px) {
-  .row {
-    display: flex;
-    justify-content: center;
-  }
-
-  .row .img-basket {
-    display: flex;
-  }
 
   .valide-basket-mobile {
     display: none;
