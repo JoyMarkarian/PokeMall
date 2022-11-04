@@ -179,7 +179,10 @@ function Home() {
             data-bs-target="#carouselDark"
             data-bs-slide="prev"
           >
-            <span className="carousel-control-prev-icon " aria-hidden="true" />
+            <span
+              className="carousel-control-prev-icon bg-secondary rounded-circle"
+              aria-hidden="true"
+            />
             <span className="visually-hidden" />
           </button>
           <button
@@ -188,12 +191,15 @@ function Home() {
             data-bs-target="#carouselDark"
             data-bs-slide="next"
           >
-            <span className="carousel-control-next-icon" aria-hidden="true" />
+            <span
+              className="carousel-control-next-icon bg-secondary rounded-circle"
+              aria-hidden="true"
+            />
             <span className="visually-hidden" />
           </button>
           {/* ------------Button--------- */}
           <div className="carousel-caption d-none d-md-flex justify-content-md-center">
-            <button className="btn btn-outline-success rounded" type="button">
+            <button className="btn btn-success rounded" type="button">
               Adopt him
             </button>
           </div>
