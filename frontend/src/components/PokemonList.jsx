@@ -34,7 +34,7 @@ function PokemonList() {
             id="floatingSelect"
             onChange={(e) => setSorting(e.target.value)}
           >
-            <option value="default">Default select</option>
+            <option value="default">Pokedex index</option>
             <option value="ascending">Ascending price</option>
             <option value="decreasing">Decreasing price</option>
           </select>
