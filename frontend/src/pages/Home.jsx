@@ -40,7 +40,7 @@ function Home() {
               </div>
             </div>
 
-            <div className="hardChoose d-flex flex-column my-1">
+            <div className="hardChoose w-100 d-flex flex-column my-1">
               <div className="h-75">
                 <h3 className="newsTitle m-2">Is it hard to choose?</h3>
                 <div className="imgHard d-flex">
@@ -159,20 +159,20 @@ function Home() {
             </div>
             <div className="carousel-item">
               <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/7.svg"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/8.svg"
                 className="d-block w-100"
                 alt=""
               />
             </div>
             <div className="carousel-item">
               <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/7.svg"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/9.svg"
                 className="d-block w-100"
                 alt=""
               />
             </div>
           </div>
-          {/* -------------fleche slide-------------- */}
+          {/* -------------fleche slide OKKKK-------------- */}
           <button
             className="carousel-control-prev "
             type="button"
@@ -186,15 +186,12 @@ function Home() {
             <span className="visually-hidden" />
           </button>
           <button
-            className="carousel-control-next"
+            className="carousel-control-next bg-light rounded"
             type="button"
             data-bs-target="#carouselDark"
             data-bs-slide="next"
           >
-            <span
-              className="carousel-control-next-icon bg-secondary rounded-circle"
-              aria-hidden="true"
-            />
+            <span className="carousel-control-next-icon" aria-hidden="true" />
             <span className="visually-hidden" />
           </button>
           {/* ------------Button--------- */}
