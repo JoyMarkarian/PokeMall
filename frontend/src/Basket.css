@@ -29,7 +29,6 @@
   .row {
     display: flex;
     justify-content: center;
-    align-items: center;
   }
 
   .row .img-basket {
@@ -48,8 +47,5 @@
     display: block;
     justify-content: center;
     align-items: center;
-  }
-  .card-summary {
-    width: 30%;
   }
 }
