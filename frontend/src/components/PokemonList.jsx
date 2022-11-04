@@ -41,17 +41,6 @@ function PokemonList() {
           <label htmlFor="floatingSelect">Sort by</label>
         </div>
       </div>
-      {/* <div>
-        <h2>Filter by type</h2>
-        <div>
-          <input type="checkbox" name="typeWater" value="water" id="water" />
-          <label htmlFor="starting">Water</label>
-        </div>
-        <div>
-          <input type="checkbox" name="typeFire" value="fire" id="fire" />
-          <label htmlFor="reserves">Fire</label>
-        </div>
-      </div> */}
       <div className="row justify-content-center row-col-2 row-col-md-4">
         {getPokemons()}
       </div>
