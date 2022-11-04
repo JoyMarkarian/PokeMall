@@ -1,30 +1,58 @@
 *{
-    color: #2a4f3f;
-  }
-  
-  h1{
-    font-family: oswald, sans-serif;
-  }
-  
-  .imageBck{
-    background-image: url('https://media.discordapp.net/attachments/1031472283761508363/1035485124269187092/unknown.png?width=1243&height=580');
-    background-size: cover;
-    height: 25vh;
-  }
-  
-  h1.colorTitle{
-    color: #c2c4d1;
-    height: 25vh;
-  }
-  
-  @media screen and (min-width : 769px) {
-   .imageBck{
-    background-size: cover;
-    background-position: 50% 50%;
-    height: 50vh;
-   }
-  
-   h1.colorTitle{
-    height: 50vh;
-   }
-  };
+  color: #2a4f3f;
+  font-family: noto-sans, sans-serif;
+}
+
+h1{
+  font-family: oswald, sans-serif;
+}
+
+.imageBck{
+  background-image: url('https://media.discordapp.net/attachments/1031472283761508363/1035485124269187092/unknown.png?width=1243&height=580');
+  background-size: cover;
+  height: 25vh;
+}
+
+h1.colorTitle{
+  color: #c2c4d1;
+  height: 25vh;
+}
+
+.lastArrival{
+  width: 100%;
+  background-color: rgba(0, 255, 136, 0.77);
+}
+.hardChoose{
+  width: 100%;
+  background-color: rgba(255, 251, 0, 0.838);
+}
+
+.season{
+  width: 100%;
+  background-color: rgb(2, 174, 254);
+  height: 30vh;
+}
+
+.newsTitle{
+  text-align: center;
+}
+
+
+@media screen and (min-width : 769px) {
+ .imageBck{
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 50vh;
+ }
+
+ h1.colorTitle{
+  height: 50vh;
+ }
+
+ #carouselHome{
+  height: 80vh;
+}
+.carousel-item{
+  height: 70vh;
+}
+};

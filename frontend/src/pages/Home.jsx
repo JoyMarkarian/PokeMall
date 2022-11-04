@@ -1,3 +1,5 @@
+import "../Home.css";
+
 function Home() {
   return (
     <div className="homePage">
@@ -9,12 +11,12 @@ function Home() {
         </div>
       </div>
       <div className="container mt-5">
-        <h1 className="text-center">NEWS</h1>
+        <h1 className="text-center m-3">NEWS</h1>
         <div className="newsHome container-fluid">
           <div className="lastChoose d-md-flex gap-md-2">
             <div className="lastArrival d-flex flex-column my-1">
               <div className="h-75">
-                <h3 className="newsTitle">Last Arrival</h3>
+                <h3 className="newsTitle m-2">Last Arrival</h3>
                 <div className="imgLast d-flex">
                   <img
                     src="https://media.discordapp.net/attachments/1019616949627531304/1037679818067693648/unknown.png?width=566&height=580"
@@ -40,7 +42,7 @@ function Home() {
 
             <div className="hardChoose d-flex flex-column my-1">
               <div className="h-75">
-                <h3 className="newsTitle">Is it hard to choose?</h3>
+                <h3 className="newsTitle m-2">Is it hard to choose?</h3>
                 <div className="imgHard d-flex">
                   <img
                     src="https://media.discordapp.net/attachments/1019616949627531304/1037679391397908500/unknown.png"
@@ -70,17 +72,17 @@ function Home() {
               className="w-50"
             />
             <div className="christHome w-100">
-              <div className="christHomeShop h-100 d-flex flex-column justify-content-center">
-                <h4 className="newsTitle">
+              <div className="christHomeShop h-100 d-flex flex-column">
+                <h4 className="newsTitle h-100 d-flex  flex-column justify-content-center">
                   The magic of Christmas with a new friend !
                 </h4>
-                <div className="buttonNews align-self-center align-self-end my-2">
+                <div className="buttonNews d-flex justify-content-center mb-2">
                   <button
                     className="bNews
                     btn btn-success rounded"
                     type="button"
                   >
-                    Shop Now
+                    Shop now
                   </button>
                 </div>
               </div>
@@ -89,18 +91,19 @@ function Home() {
         </div>
       </div>
       <div className="sliderHome container mt-5">
-        <h1 className="text-center">BEST SELLERS</h1>
+        <h1 className="text-center m-3">BEST SELLERS</h1>
         <div
           id="carouselHome"
           className="carousel carousel-dark slide border border-3 border-muted rounded m-2 shadow-lg mb-2"
           data-bs-ride="carousel"
         >
-          <div className="carousel-indicators">
+          {/* -------------------------indicator bottom--------------- */}
+          <div className="carousel-indicators d-none d-md-flex">
             <button
               type="button"
               data-bs-target="#carouselDark"
               data-bs-slide-to="0"
-              className="active"
+              className="active "
               aria-current="true"
               aria-label="Slide 1"
             />
@@ -129,6 +132,7 @@ function Home() {
               aria-label="Slide 5"
             />
           </div>
+          {/* -----------------interieur---------- */}
           <div className="carousel-inner">
             <div className="carousel-item active" data-bs-interval="10000">
               <div className="container d-flex justify-content-center">
@@ -168,13 +172,14 @@ function Home() {
               />
             </div>
           </div>
+          {/* -------------fleche slide-------------- */}
           <button
-            className="carousel-control-prev"
+            className="carousel-control-prev "
             type="button"
             data-bs-target="#carouselDark"
             data-bs-slide="prev"
           >
-            <span className="carousel-control-prev-icon" aria-hidden="true" />
+            <span className="carousel-control-prev-icon " aria-hidden="true" />
             <span className="visually-hidden" />
           </button>
           <button
@@ -186,9 +191,10 @@ function Home() {
             <span className="carousel-control-next-icon" aria-hidden="true" />
             <span className="visually-hidden" />
           </button>
-          <div className="carousel-caption">
+          {/* ------------Button--------- */}
+          <div className="carousel-caption d-none d-md-flex justify-content-md-center">
             <button className="btn btn-outline-success rounded" type="button">
-              Shop Now
+              Adopt him
             </button>
           </div>
         </div>
