@@ -1,11 +1,26 @@
 .allProducts {
   background-color: #EDF1EF;
-  /* font-family: Noto-sans ; */
+  font-family: "Noto Sans" ;
+}
+
+h1 {
+  font-family: "Oswald";
+  margin-bottom: 50px;
 }
 .cardPokemon {
-  width: 50%;
+  width: 45%;
   border-color: #2A4F3F;
+  border-width: 2px;
   padding: 1%;
+  margin: 1%;
+  background-color: #EDF1EF;
+}
+.card-title {
+  margin-bottom: 1px;
+}
+
+.card-index {
+  margin-bottom: 2px;
 }
 
 .btn {
@@ -14,16 +29,21 @@ border-color : #2A4F3F;
 }
 
 .form-floating {
-  margin-left: 6%;
+  margin-left: 1%;
+  margin-bottom: 10px;
 }
 
 .form-select {
   width: 45%;
+  border-color: #2A4F3F;
+  border-width: 1px;
+  background-color: #EDF1EF;
 }
 
 .list-group {
   width: 20%;
 }
+
 @media screen and (min-width : 769px) {
   .cardPokemon {
     width : 20%;
@@ -35,6 +55,10 @@ border-color : #2A4F3F;
 
   .cardPokemon {
     margin: 1%;
+  }
+
+  .form-floating {
+    margin-left: 6%;
   }
 }
 

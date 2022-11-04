@@ -10,9 +10,9 @@ function PokemonCard({ pokemon }) {
           alt={pokemon.name}
         />
       </div>
-      <h2 className="card-title">{pokemon.name}</h2>
-      {/* <p className="card-text">{pokemon.pokedex_index}</p> */}
-      <h3 className="card-text">Price : {pokemon.price}$</h3>
+      <h2 className="card-title text-capitalize">{pokemon.name}</h2>
+      <p className="card-index">Pokedex index : {pokemon.pokedex_index}</p>
+      <h3 className="card-price">Price : {pokemon.price}$</h3>
       <button type="button" className="btn btn-success">
         Show product
       </button>
