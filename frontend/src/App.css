@@ -1,56 +1,90 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.stats {
+  width: 45px;
+  height: 45px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.oneProductStats {
+  line-height: 45px;
 }
 
-.App {
-  text-align: center;
+.importantText {
+  font-family: "Oswald", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.textRegular {
+  font-family: "Noto Sans", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.divPrincipale {
+  background-color: #edf1ef;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.imageOneProduct {
+  max-height: 183px;
+  max-width: 100%;
+}
+
+.typeAbilities {
+  width: 70%;
+}
+
+.oneProductBtn {
+  height: 35px;
+  width: 35px;
+}
+
+.grass {
+  background-color: #4dad5b;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.poison {
+  background-color: #855ac9;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fire {
+  background-color: #ee6b2f;
+  color: white;
 }
 
-button {
-  font-size: calc(10px + 2vmin);
+.normal {
+  background-color: #919191;
+  color: white;
+}
+
+.water {
+  background-color: #30a7d7;
+  color: white;
+}
+
+.bug {
+  background-color: #9fe346;
+  color: white;
+}
+
+.flying {
+  background-color: #be8ce2;
+  color: white;
+}
+
+.electric {
+  background-color: #e6bc2f;
+  color: white;
+}
+
+.ground {
+  background-color: #cc891e;
+  color: white;
+}
+
+.fairy {
+  background-color: #e7a4dc;
+  color: white;
+}
+
+@media screen and (min-width: 800px) {
+  .typeAbilities {
+    width: 40%;
+  }
 }
