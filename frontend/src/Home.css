@@ -1,6 +1,6 @@
 * {
   color: #2a4f3f;
-  font-family: noto-sans, sans-serif;
+  font-family: noto sans, sans-serif;
 }
 
 h1 {
@@ -21,6 +21,12 @@ h1.colorTitle {
 .lastArrival {
   background-color: rgba(0, 255, 136, 0.77);
 }
+
+.bNews{
+  height: 50px;
+  width: 150px;
+}
+
 .hardChoose {
   background-color: rgba(255, 251, 0, 0.838);
 }
@@ -32,6 +38,16 @@ h1.colorTitle {
 
 .newsTitle {
   text-align: center;
+}
+
+.carousel-item img {
+  height: 40vh;
+  margin: 15px auto;
+}
+
+#carouselCaptionsHome{
+  background-color: rgb(4, 0, 255);
+  height: 55vh;
 }
 
 @media screen and (min-width: 769px) {
