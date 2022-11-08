@@ -92,7 +92,7 @@ function Home() {
         </div>
         <div
           id="carouselCaptionsHome"
-          className="carousel slide"
+          className="carousel slide shadow"
           data-bs-ride="carousel"
         >
           <div className="carousel-indicators m-0">
@@ -100,29 +100,33 @@ function Home() {
               type="button"
               data-bs-target="#carouselCaptions"
               data-bs-slide-to="0"
-              className="active"
+              className="active bg-success"
               aria-current="true"
               aria-label="Slide 1"
             />
             <button
+              className="bg-success"
               type="button"
               data-bs-target="#carouselCaptions"
               data-bs-slide-to="1"
               aria-label="Slide 2"
             />
             <button
+              className="bg-success"
               type="button"
               data-bs-target="#carouselCaptions"
               data-bs-slide-to="2"
               aria-label="Slide 3"
             />
             <button
+              className="bg-success"
               type="button"
               data-bs-target="#carouselCaptions"
               data-bs-slide-to="3"
               aria-label="Slide 4"
             />
             <button
+              className="bg-success"
               type="button"
               data-bs-target="#carouselCaptions"
               data-bs-slide-to="4"
@@ -249,19 +253,25 @@ function Home() {
           <button
             className="carousel-control-prev"
             type="button"
-            data-bs-target="#carouselExampleCaptions"
+            data-bs-target="#carouselCaptions"
             data-bs-slide="prev"
           >
-            <span className="carousel-control-prev-icon" aria-hidden="true" />
+            <span
+              className="carousel-control-prev-icon bg-success rounded-circle"
+              aria-hidden="true"
+            />
             <span className="visually-hidden">Previous</span>
           </button>
           <button
             className="carousel-control-next"
             type="button"
-            data-bs-target="#carouselExampleCaptions"
+            data-bs-target="#carouselCaptions"
             data-bs-slide="next"
           >
-            <span className="carousel-control-next-icon" aria-hidden="true" />
+            <span
+              className="carousel-control-next-icon bg-success rounded-circle"
+              aria-hidden="true"
+            />
             <span className="visually-hidden">Next</span>
           </button>
         </div>

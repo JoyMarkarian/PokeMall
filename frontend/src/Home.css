@@ -46,13 +46,13 @@ h1.colorTitle {
 }
 
 #carouselCaptionsHome{
-  background-color: rgb(4, 0, 255);
+  background-image: url(https://i.pinimg.com/originals/18/48/91/1848915ac06c25049f9cdce1987768a6.jpg);
+  background-size: cover;
   height: 55vh;
 }
 
 @media screen and (min-width: 769px) {
   .imageBck {
-    background-size: cover;
     background-position: 50% 50%;
     height: 50vh;
   }
