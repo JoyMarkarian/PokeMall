@@ -5,7 +5,7 @@ import Burger from "../assets/Burger.png";
 import Panier from "../assets/panier.png";
 import Logo from "../assets/logo.png";
 
-import "../Header.css";
+import "./Header.css";
 
 export default function Header({ setPage }) {
   const [toggleMenuMobile, settoggleMenuMobile] = useState(false);
