@@ -1,9 +1,15 @@
-* {
+.homePage {
   color: #2a4f3f;
   font-family: noto sans, sans-serif;
+
 }
 
-h1 {
+.newsHomeDiv{
+width: 80%;
+margin: auto;
+}
+
+.titleHome {
   font-family: oswald, sans-serif;
 }
 
@@ -31,6 +37,10 @@ h1.colorTitle {
   background-color: rgba(255, 251, 0, 0.838);
 }
 
+.imgNewsHome{
+  height: 100%;
+}
+
 .season {
   background-color: rgb(2, 174, 254);
   height: 30vh;
@@ -46,9 +56,10 @@ h1.colorTitle {
 }
 
 #carouselCaptionsHome{
-  background-image: url(https://i.pinimg.com/originals/18/48/91/1848915ac06c25049f9cdce1987768a6.jpg);
-  background-size: cover;
+  background-color: blue;
   height: 55vh;
+  width: 80%;
+  margin: auto;
 }
 
 @media screen and (min-width: 769px) {

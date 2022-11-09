@@ -10,13 +10,13 @@ function Home() {
           </h1>
         </div>
       </div>
-      <div className="container-fluid mt-5 p-0">
-        <h1 className="text-center m-3">NEWS</h1>
-        <div className="newsHome container-fluid">
+      <div className="newsHomeDiv container-fluid">
+        <h1 className="titleHome text-center m-3">NEWS</h1>
+        <div className="newsHome">
           <div className="lastChoose d-md-flex gap-md-2">
             <div className="lastArrival d-flex flex-column my-1">
               <h3 className="newsTitle m-2">Last Arrival</h3>
-              <div className="imgLast d-flex">
+              <div className="imgNewsHome d-flex">
                 <img
                   src="https://media.discordapp.net/attachments/1019616949627531304/1037679818067693648/unknown.png?width=566&height=580"
                   alt=""
@@ -40,7 +40,7 @@ function Home() {
 
             <div className="hardChoose w-100 d-flex flex-column my-1">
               <h3 className="newsTitle m-2">Is it hard to choose?</h3>
-              <div className="imgHard d-flex">
+              <div className="imgNewsHome d-flex">
                 <img
                   src="https://media.discordapp.net/attachments/1019616949627531304/1037679391397908500/unknown.png"
                   alt=""
@@ -78,7 +78,7 @@ function Home() {
                     btn btn-success rounded"
                     type="button"
                   >
-                    Shop now
+                    Shop Now
                   </button>
                 </div>
               </div>
@@ -88,11 +88,11 @@ function Home() {
       </div>
       <div className="bestSellersHome container-fluid">
         <div className="HBest  mt-5">
-          <h1 className="titleBest text-center m-3">BEST SELLERS</h1>
+          <h1 className="titleHome text-center m-3">BEST SELLERS</h1>
         </div>
         <div
           id="carouselCaptionsHome"
-          className="carousel slide shadow"
+          className="carousel slide shadow container-fluid"
           data-bs-ride="carousel"
         >
           <div className="carousel-indicators m-0">
@@ -140,12 +140,6 @@ function Home() {
                 className="imgSliderHome d-block w-75"
                 alt="..."
               />
-              {/* <div className="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>
-                  Some representative placeholder content for the first slide.
-                </p>
-              </div> */}
               <div className="btnSliderHome d-flex justify-content-center">
                 <button
                   className="bNews
@@ -163,12 +157,6 @@ function Home() {
                 className="imgSliderHome d-block w-75"
                 alt="..."
               />
-              {/* <div className="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>
-                  Some representative placeholder content for the second slide.
-                </p>
-              </div> */}
               <div className="btnSliderHome d-flex justify-content-center">
                 <button
                   className="bNews
@@ -186,12 +174,6 @@ function Home() {
                 className="imgSliderHome d-block w-75"
                 alt="..."
               />
-              {/* <div className="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>
-                  Some representative placeholder content for the third slide.
-                </p>
-              </div> */}
               <div className="btnSliderHome d-flex justify-content-center">
                 <button
                   className="bNews
@@ -209,12 +191,6 @@ function Home() {
                 className="imgSliderHome d-block w-75"
                 alt="..."
               />
-              {/* <div className="carousel-caption d-none d-md-block">
-                <h5>Fourth slide label</h5>
-                <p>
-                  Some representative placeholder content for the fourth slide.
-                </p>
-              </div> */}
               <div className="btnSliderHome d-flex justify-content-center">
                 <button
                   className="bNews
@@ -232,12 +208,6 @@ function Home() {
                 className="imgSliderHome d-block w-75"
                 alt="..."
               />
-              {/* <div className="carousel-caption d-none d-md-block">
-                <h5>Fifth slide label</h5>
-                <p>
-                  Some representative placeholder content for the fifth slide.
-                </p>
-              </div> */}
               <div className="btnSliderHome d-flex justify-content-center">
                 <button
                   className="bNews
