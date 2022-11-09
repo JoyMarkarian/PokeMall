@@ -26,7 +26,9 @@ h1.colorTitle {
 }
 
 .lastArrival {
-  background-color: rgba(0, 255, 136, 0.77);
+  background-image: url(https://pm1.narvii.com/7243/0b36782d158f6da0639e38ebf94af3d5c37288c2r1-668-486v2_hq.jpg);
+  background-size: cover;
+  color:#2a4f3f;
 }
 
 .bNews{
@@ -36,7 +38,9 @@ h1.colorTitle {
 }
 
 .hardChoose {
-  background-color: rgba(255, 251, 0, 0.838);
+  background-image: url(https://pm1.narvii.com/7243/adcbbe4c769bbaf0858abef9625077294911804br1-593-534v2_hq.jpg);
+  background-size: cover;
+  color:#2a4f3f;
 }
 
 .imgNewsHome{
@@ -44,7 +48,9 @@ h1.colorTitle {
 }
 
 .season {
-  background-color: rgb(2, 174, 254);
+  background-image: url(https://us.123rf.com/450wm/elvil/elvil1303/elvil130300040/18684091-fond-bleu-carte-de-no%C3%ABl-avec-des-flocons-de-neige.jpg);
+  background-size: cover;
+  /* background-position: center; */
   height: 30vh;
 }
 
@@ -58,7 +64,10 @@ h1.colorTitle {
 }
 
 #carouselCaptionsHome{
-  background-color: rgba(0, 0, 255, 0.446);
+  /* background-color: rgb(0, 0, 255); */
+  background-image: url(https://ak.picdn.net/shutterstock/videos/1040337182/thumb/1.jpg?ip=x480);
+  background-size: cover;
+  background-position: center;
   height: 55vh;
   width: 80%;
   margin: auto;
