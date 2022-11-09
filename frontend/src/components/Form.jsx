@@ -4,7 +4,7 @@ function Form() {
       <form className="container">
         <h1 className="text-center fs-1 mb-4 importantText">contact</h1>
         <div className="container row m-0">
-          <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex flex-column align-items-center">
+          <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex flex-column align-items-center align-items-sm-center align-items-md-end align-items-lg-end align-items-xl-end">
             <input
               type="text"
               name="name"
@@ -27,7 +27,7 @@ function Form() {
               className="rounded w-75 thirdInput textRegular"
             />
           </div>
-          <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center">
+          <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex flex-column align-items-center align-items-sm-center align-items-md-start align-items-lg-start align-items-xl-start">
             <textarea className="rounded w-75 h-100" />
           </div>
           <div className=" col -12 text-end mt-2">
