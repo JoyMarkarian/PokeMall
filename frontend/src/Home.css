@@ -1,7 +1,7 @@
 .homePage {
   color: #2a4f3f;
   font-family: noto sans, sans-serif;
-
+  background-color: #edf1ef;
 }
 
 .newsHomeDiv{
@@ -11,6 +11,7 @@ margin: auto;
 
 .titleHome {
   font-family: oswald, sans-serif;
+  font-weight:bold;
 }
 
 .imageBck {
@@ -30,7 +31,8 @@ h1.colorTitle {
 
 .bNews{
   height: 50px;
-  width: 150px;
+  width: auto;
+  background-color: #2a4f3f;
 }
 
 .hardChoose {
@@ -56,7 +58,7 @@ h1.colorTitle {
 }
 
 #carouselCaptionsHome{
-  background-color: blue;
+  background-color: rgba(0, 0, 255, 0.446);
   height: 55vh;
   width: 80%;
   margin: auto;
