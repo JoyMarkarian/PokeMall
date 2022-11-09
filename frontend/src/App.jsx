@@ -1,11 +1,11 @@
-import React,{ useState } from "react";
-
+import React, { useState } from "react";
 
 import AllProducts from "@pages/AllProducts";
 import Basket from "@pages/Basket";
 import Home from "@pages/Home";
 import OneProduct from "@pages/OneProduct";
 
+import Form from "@components/Form";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 
@@ -14,7 +14,6 @@ import pokemons from "./services/pokemons";
 import "./App.css";
 
 function App() {
-
   const [page, setPage] = useState({ path: "Home", index: null });
   const [id, setId] = React.useState(0);
 
@@ -42,6 +41,7 @@ function App() {
         id={id}
         setId={setId}
       />
+      <Form />
       {page.path === "Contact" ? <Footer /> : ""}
     </div>
   );
