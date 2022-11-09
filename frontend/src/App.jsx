@@ -42,7 +42,7 @@ function App() {
           setId={setId}
         />
       )}
-      {page.path === "Contact" ? <Footer /> : ""}
+      {page.path === "Contact" && <Footer />}
     </div>
   );
 }
