@@ -1,36 +1,46 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import PokemonCard from "./PokemonCard";
-import pokemons from "../services/pokemons";
 
 import "../PokemonList.css";
 
-function PokemonList() {
-  const [sorting, setSorting] = React.useState("default");
+function PokemonList({ search }) {
+  const [pokemonsList, setPokemonsList] = useState([]);
+  const [sorting, setSorting] = useState("default");
+
+  useEffect(() => {
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/pokemons`)
+      .then((res) => res.json())
+      .then((data) => setPokemonsList(data))
+      .catch((err) => console.error(err));
+  }, []);
+
   function getPokemons() {
     let orderPokemons = [];
     if (sorting === "default")
-      orderPokemons = pokemons.sort(
+      orderPokemons = pokemonsList.sort(
         (a, b) => a.pokedex_index - b.pokedex_index
       );
     if (sorting === "ascending") {
-      orderPokemons = pokemons.sort((a, b) => a.price - b.price);
+      orderPokemons = pokemonsList.sort((a, b) => a.price - b.price);
     }
     if (sorting === "decreasing") {
-      orderPokemons = pokemons.sort((a, b) => b.price - a.price);
+      orderPokemons = pokemonsList.sort((a, b) => b.price - a.price);
     }
-    return orderPokemons.map((pokemon) => {
-      return <PokemonCard key={pokemon.pokedex_index} pokemon={pokemon} />;
-    });
+    return orderPokemons
+      .filter((pokemon) => pokemon.name.startsWith(search) || search === "")
+      .map((pokemon) => {
+        return <PokemonCard key={pokemon.pokedex_index} pokemon={pokemon} />;
+      });
   }
   return (
-    <div className="allProducts">
+    <div className="all-products">
       <div>
-        <h1>All Products</h1>
+        <h1 className="all-products-title text-center">All Products</h1>
       </div>
       <div className="form-global">
-        <div className="form-floating">
+        <div className="form-floating sort-by">
           <select
-            className="form-select"
+            className="form-select select-sort"
             id="floatingSelect"
             onChange={(e) => setSorting(e.target.value)}
           >
