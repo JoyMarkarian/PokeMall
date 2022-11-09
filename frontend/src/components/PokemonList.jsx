@@ -6,7 +6,7 @@ import "../PokemonList.css";
 
 function PokemonList() {
   const [sorting, setSorting] = React.useState("default");
-  const getPokemons = () => {
+  function getPokemons() {
     let orderPokemons = [];
     if (sorting === "default")
       orderPokemons = pokemons.sort(
@@ -21,7 +21,7 @@ function PokemonList() {
     return orderPokemons.map((pokemon) => {
       return <PokemonCard key={pokemon.pokedex_index} pokemon={pokemon} />;
     });
-  };
+  }
   return (
     <div className="allProducts">
       <div>
