@@ -13,7 +13,7 @@ import pokemons from "./services/pokemons";
 import "./App.css";
 
 function App() {
-  const [page, setPage] = useState({ path: "one Product", index: 1 });
+  const [page, setPage] = useState({ path: "Home", index: null });
   const [id, setId] = React.useState(0);
 
   return (
