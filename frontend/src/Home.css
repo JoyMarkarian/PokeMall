@@ -50,7 +50,6 @@ h1.colorTitle {
 .season {
   background-image: url(https://us.123rf.com/450wm/elvil/elvil1303/elvil130300040/18684091-fond-bleu-carte-de-no%C3%ABl-avec-des-flocons-de-neige.jpg);
   background-size: cover;
-  /* background-position: center; */
   height: 30vh;
 }
 
@@ -64,8 +63,7 @@ h1.colorTitle {
 }
 
 #carouselCaptionsHome{
-  /* background-color: rgb(0, 0, 255); */
-  background-image: url(https://ak8.picdn.net/shutterstock/videos/1014071798/thumb/1.jpg?ip=x480);
+  background-image: url(https://ak.picdn.net/shutterstock/videos/27176572/thumb/1.jpg?ip=x480);
   background-size: cover;
   background-position: center;
   height: 55vh;
