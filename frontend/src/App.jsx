@@ -13,8 +13,7 @@ import pokemons from "./services/pokemons";
 import "./App.css";
 
 function App() {
-  const [page, setPage] = useState({ path: "Home", index: null });
-  const [id, setId] = React.useState(0);
+  const [page, setPage] = useState({ path: "one Product", index: 1 });
 
   return (
     <div className="App">
@@ -23,24 +22,7 @@ function App() {
       {page.path === "Products" && <AllProducts />}
       {page.path === "Basket" && <Basket />}
       {page.path === "one Product" && (
-        <OneProduct
-          index={pokemons[page.index].pokedex_index}
-          name={pokemons[page.index].name}
-          image={pokemons[page.index].url}
-          life={pokemons[page.index].hp}
-          attack={pokemons[page.index].stats.attack}
-          defense={pokemons[page.index].stats.defense}
-          specialAttack={pokemons[page.index].stats.special_attack}
-          specialDefense={pokemons[page.index].stats.special_defence}
-          speed={pokemons[page.index].stats.speed}
-          primaryType={pokemons[page.index].type.primary_type}
-          secondaryType={pokemons[page.index].type.secondary_type}
-          price={pokemons[page.index].price}
-          firstAbility={pokemons[page.index].ability.first_ability}
-          secondAbility={pokemons[page.index].ability.seconde_ability}
-          id={id}
-          setId={setId}
-        />
+        <OneProduct pokemon={pokemons[page.index - 1]} setPage={setPage} />
       )}
       {page.path === "Contact" && <Footer />}
     </div>
