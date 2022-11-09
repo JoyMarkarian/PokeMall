@@ -1,19 +1,20 @@
-.allProducts {
-  background-color: #EDF1EF;
-  font-family: "Noto Sans" ;
+.all-products {
+  background-color: #edf1ef;
+  font-family: "Noto Sans";
 }
 
-h1 {
+.all-products-title {
   font-family: "Oswald";
   margin-bottom: 50px;
 }
-.cardPokemon {
+
+.card-pokemon {
   width: 45%;
-  border-color: #2A4F3F;
+  border-color: #2a4f3f;
   border-width: 2px;
   padding: 1%;
   margin: 1%;
-  background-color: #EDF1EF;
+  background-color: #edf1ef;
 }
 .card-title {
   margin-bottom: 1px;
@@ -23,43 +24,41 @@ h1 {
   margin-bottom: 2px;
 }
 
-.btn {
-background-color: #2A4F3F;
-border-color : #2A4F3F;
+.btn-card {
+  background-color: #2a4f3f;
+  border-color: #2a4f3f;
 }
 
-.form-floating {
+.sort-by {
   margin-left: 1%;
   margin-bottom: 10px;
 }
 
-.form-select {
+.select-sort {
   width: 45%;
-  border-color: #2A4F3F;
+  border-color: #2a4f3f;
   border-width: 1px;
-  background-color: #EDF1EF;
+  background-color: #edf1ef;
 }
 
 .list-group {
   width: 20%;
 }
 
-@media screen and (min-width : 769px) {
-  .cardPokemon {
-    width : 20%;
-  } 
-
-  .form-select {
-  width: 15%;
+@media screen and (min-width: 769px) {
+  .card-pokemon {
+    width: 20%;
   }
 
-  .cardPokemon {
+  .select-sort {
+    width: 15%;
+  }
+
+  .card-pokemon {
     margin: 1%;
   }
 
-  .form-floating {
+  .sort-by {
     margin-left: 6%;
   }
 }
-
-

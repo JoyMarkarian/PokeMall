@@ -23,14 +23,14 @@ function PokemonList() {
     });
   };
   return (
-    <div className="allProducts">
+    <div className="all-products">
       <div>
-        <h1>All Products</h1>
+        <h1 className="all-products-title text-center">All Products</h1>
       </div>
       <div className="form-global">
-        <div className="form-floating">
+        <div className="form-floating sort-by">
           <select
-            className="form-select"
+            className="form-select select-sort"
             id="floatingSelect"
             onChange={(e) => setSorting(e.target.value)}
           >
