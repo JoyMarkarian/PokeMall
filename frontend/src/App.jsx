@@ -5,7 +5,6 @@ import Basket from "@pages/Basket";
 import Home from "@pages/Home";
 import OneProduct from "@pages/OneProduct";
 
-import Form from "@components/Form";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 
@@ -41,7 +40,6 @@ function App() {
         id={id}
         setId={setId}
       />
-      <Form />
       {page.path === "Contact" ? <Footer /> : ""}
     </div>
   );
