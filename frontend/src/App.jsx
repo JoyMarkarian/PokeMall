@@ -13,7 +13,7 @@ import pokemons from "./services/pokemons";
 import "./App.css";
 
 function App() {
-  const [search, setSearch] = useState("")
+  const [search, setSearch] = useState("");
   const [page, setPage] = useState({ path: "Home", index: null });
   const [id, setId] = React.useState(0);
 
@@ -23,9 +23,9 @@ function App() {
 
   return (
     <div className="App">
-      <Header setPage={setPage} />
+      <Header setPage={setPage} search={search} handleSearch={handleSearch} />
       {page.path === "Home" && <Home pokemons={pokemons} />}
-      {page.path === "Products" && <AllProducts />}
+      {page.path === "Products" && <AllProducts search={search} />}
       {page.path === "Basket" && <Basket />}
       {page.path === "one Product" && (
         <OneProduct
