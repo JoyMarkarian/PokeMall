@@ -33,6 +33,19 @@
   width: 35px;
 }
 
+
+.contactButton {
+  margin-right: 12.5%;
+}
+
+.formBG {
+  background-color: #edf1ef;
+}
+
+.thirdInput {
+  margin-bottom: 1rem;
+}
+
 .grass {
   background-color: #4dad5b;
 }
@@ -76,5 +89,13 @@
 @media screen and (min-width: 800px) {
   .typeAbilities {
     width: 40%;
+  }
+
+  .contactButton {
+    margin-right: 12.1%;
+  }
+
+  .thirdInput {
+    margin-bottom: 0;
   }
 }
