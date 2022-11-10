@@ -21,7 +21,8 @@ router.get("/pokemons", (req, res) => {
 
 router.get("/pokemons/:id", (req, res) => {
   const pokemon = pokemons.find(
-    (poke) => poke.pokedex_index === parseInt(req.params.id, 10));
+    (poke) => poke.pokedex_index === parseInt(req.params.id, 10)
+  );
   res.send(pokemon);
 });
 
