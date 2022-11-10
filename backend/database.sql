@@ -1,38 +1,37 @@
-CREATE TABLE item (
-  id int(11) UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  title varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE DATABASE IF NOT EXISTS pokemall;
+USE pokemall;
+DROP TABLE IF EXISTS pokemons;
 
-INSERT INTO item (title) VALUES ('Stuff'), ('Doodads');
-
-CREATE TABLE pokemon (
-  `index` INT() PIMARY KEY NOT NULL AUTO_INCREMENT,
+CREATE TABLE pokemons (
+  `index` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `name` VARCHAR (255) NOT NULL,
   `url` VARCHAR (255) NOT NULL,
-  experience INT() NOT NULL,
-  height INT() NOT NULL,
-  hp INT() NOT NULL,
-  attack INT() NOT NULL,
-  defense INT() NOT NULL,attack INT() NOT NULL,defence INT() NOT NULL,
-  speed INT() NOT NULL,
-  `weight` INT() NOT NULL,
+  experience INT NOT NULL,
+  height INT NOT NULL,
+  hp INT NOT NULL,
+  attack INT NOT NULL,
+  defense INT NOT NULL,
+  specialAttack INT NOT NULL,
+  specialDefence INT NOT NULL,
+  speed INT NOT NULL,
+  `weight` INT NOT NULL,
   primaryType VARCHAR (255) NOT NULL,
-  secondaryType VARCHAR (255) NOT NULL,
-  price INT() NOT NULL,
+  secondaryType VARCHAR (255),
+  price INT NOT NULL,
   firstAbility VARCHAR (255) NOT NULL,
-  secondeAbility VARCHAR (255) NOT NULL,
-  firstMovename VARCHAR (255) NOT NULL,
-  secondeMovename VARCHAR (255) NOT NULL,
-  thirdMovename VARCHAR (255) NOT NULL,
-  fourthMovename VARCHAR (255) NOT NULL
-)
+  secondeAbility VARCHAR (255),
+  firstMove VARCHAR (255) NOT NULL,
+  secondeMove VARCHAR (255) NOT NULL,
+  thirdMove VARCHAR (255) NOT NULL,
+  fourthMove VARCHAR (255) NOT NULL
+);
 
-INSERT INTO pokemons (`index`, `name`, `url`, experience, height, hp, attack, defenseattackdefence, speed, `weight`, primaryType, secondaryType, price, firstAbility, secondeAbility, firstMovename, secondeMovename, thirdMovename, fourthMovename)
+INSERT INTO pokemons (`index`, `name`, `url`, experience, height, hp, attack, defense, specialAttack, specialDefence, speed, `weight`, primaryType, secondaryType, price, firstAbility, secondeAbility, firstMove, secondeMove, thirdMove, fourthMove)
 VALUES
-  {
+(
   1,
   "bulbasaur",
-"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg",
+  "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg",
   64,
   7,
   45,
@@ -50,9 +49,9 @@ VALUES
   "razor-wind",
   "swords-dance",
   "cut",
-  "bind",
-  },
-  {
+  "bind"
+),
+(
   2,
   "ivysaur",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg",
@@ -62,6 +61,7 @@ VALUES
   62,
   63,
   80,
+  80,
   60,
   130,
   "grass",
@@ -69,12 +69,12 @@ VALUES
   22,
   "overgrow",
   "chlorophyll",
-    "swords-dance",
-    "cut",
-    "bind",
-    "vine-whip",
-  },
-  {
+  "swords-dance",
+  "cut",
+  "bind",
+  "vine-whip"
+),
+(
   3,
   "venusaur",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg",
@@ -95,14 +95,14 @@ VALUES
   "swords-dance",
   "cut",
   "bind",
-  "vine-whip",
-  },
-  {
+  "vine-whip"
+),
+(
   4,
   "charmander",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg",
   62,
-    6,
+  6,
   39,
   52,
   43,
@@ -118,9 +118,9 @@ VALUES
   "mega-punch",
   "fire-punch",
   "thunder-punch",
-  "scratch",
-  },
-  {
+  "scratch"
+),
+(
   5,
   "charmeleon",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/5.svg",
@@ -129,6 +129,7 @@ VALUES
   58,
   64,
   58,
+  80,
   65,
   80,
   190,
@@ -140,9 +141,9 @@ VALUES
   "mega-punch",
   "fire-punch",
   "thunder-punch",
-  "scratch",
-  },
-  {
+  "scratch"
+),
+(
   6,
   "charizard",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg",
@@ -163,9 +164,9 @@ VALUES
   "mega-punch",
   "fire-punch",
   "thunder-punch",
-  "scratch",
-  },
-  {
+  "scratch"
+),
+(
   7,
   "squirtle",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/7.svg",
@@ -186,9 +187,9 @@ VALUES
   "mega-punch",
   "ice-punch",
   "mega-kick",
-  "headbutt",
-  },
-  {
+  "headbutt"
+),
+(
   8,
   "wartortle",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/8.svg",
@@ -209,9 +210,9 @@ VALUES
   "mega-punch",
   "ice-punch",
   "mega-kick",
-  "headbutt",
-  },
-  {
+  "headbutt"
+),
+(
   9,
   "blastoise",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/9.svg",
@@ -232,9 +233,9 @@ VALUES
   "mega-punch",
   "ice-punch",
   "mega-kick",
-  "headbutt",
-  },
-  {
+  "headbutt"
+),
+(
   10,
   "caterpie",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/10.svg",
@@ -255,9 +256,9 @@ VALUES
   "tackle",
   "string-shot",
   "snore",
-  "bug-bite",
-  },
-  {
+  "bug-bite"
+),
+(
   11,
   "metapod",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/11.svg",
@@ -278,9 +279,9 @@ VALUES
   "string-shot",
   "harden",
   "iron-defense",
-  "bug-bite",
-  },
-  {
+  "bug-bite"
+),
+(
   12,
   "butterfree",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/12.svg",
@@ -301,9 +302,9 @@ VALUES
   "razor-wind",
   "gust",
   "whirlwind",
-  "headbutt",
-  },
-  {
+  "headbutt"
+),
+(
   13,
   "weedle",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/13.svg",
@@ -324,9 +325,9 @@ VALUES
   "poison-sting",
   "string-shot",
   "bug-bite",
-  "electroweb",
-  },
-  {
+  "electroweb"
+),
+(
   14,
   "kakuna",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/14.svg",
@@ -347,9 +348,9 @@ VALUES
   "string-shot",
   "harden",
   "iron-defense",
-  "bug-bite",
-  },
-  {
+  "bug-bite"
+),
+(
   15,
   "beedrill",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/15.svg",
@@ -370,9 +371,9 @@ VALUES
   "swords-dance",
   "cut",
   "headbutt",
-  "fury-attack",
-  },
-  {
+  "fury-attack"
+),
+(
   16,
   "pidgey",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/16.svg",
@@ -393,9 +394,9 @@ VALUES
   "razor-wind",
   "gust",
   "wing-attack",
-  "whirlwind",
-  },
-  {
+  "whirlwind"
+),
+(
   17,
   "pidgeotto",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/17.svg",
@@ -416,9 +417,9 @@ VALUES
   "razor-wind",
   "gust",
   "wing-attack",
-  "whirlwind",
-  },
-  {
+  "whirlwind"
+),
+(
   18,
   "pidgeot",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/18.svg",
@@ -439,9 +440,9 @@ VALUES
   "razor-wind",
   "gust",
   "wing-attack",
-  "whirlwind",
-  },
-  {
+  "whirlwind"
+),
+(
   19,
   "rattata",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/19.svg",
@@ -462,9 +463,9 @@ VALUES
   "cut",
   "headbutt",
   "tackle",
-  "body-slam",
-  },
-  {
+  "body-slam"
+),
+(
   20,
   "raticate",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/20.svg",
@@ -485,9 +486,9 @@ VALUES
   "swords-dance",
   "cut",
   "headbutt",
-  "tackle",
-  },
-  {
+  "tackle"
+),
+(
   21,
   "spearow",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/21.svg",
@@ -508,9 +509,9 @@ VALUES
   "razor-wind",
   "whirlwind",
   "fly",
-  "headbutt",
-  },
-  {
+  "headbutt"
+),
+(
   22,
   "fearow",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/22.svg",
@@ -531,9 +532,9 @@ VALUES
   "razor-wind",
   "whirlwind",
   "fly",
-  "headbutt",
-  },
-  {
+  "headbutt"
+),
+(
   23,
   "ekans",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/23.svg",
@@ -554,9 +555,9 @@ VALUES
   "bind",
   "slam",
   "headbutt",
-  "body-slam",
-  },
-  {
+  "body-slam"
+),
+(
   24,
   "arbok",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/24.svg",
@@ -577,9 +578,9 @@ VALUES
   "bind",
   "slam",
   "headbutt",
-  "body-slam",
-  },
-  {
+  "body-slam"
+),
+(
   25,
   "pikachu",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg",
@@ -600,9 +601,9 @@ VALUES
   "mega-punch",
   "pay-day",
   "thunder-punch",
-  "slam",
-  },
-  {
+  "slam"
+),
+(
   26,
   "raichu",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/26.svg",
@@ -623,9 +624,9 @@ VALUES
   "mega-punch",
   "pay-day",
   "thunder-punch",
-  "slam",
-  },
-  {
+  "slam"
+),
+(
   27,
   "sandshrew",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/27.svg",
@@ -646,9 +647,9 @@ VALUES
   "scratch",
    "swords-dance",
   "cut",
-  "sand-attack",
-  },
-  {
+  "sand-attack"
+),
+(
   28,
   "sandslash",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/28.svg",
@@ -669,9 +670,9 @@ VALUES
   "scratch",
   "swords-dance",
   "cut",
-  "sand-attack",
-  },
-  {
+  "sand-attack"
+),
+(
   29,
   "nidorino",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/29.svg",
@@ -692,9 +693,9 @@ VALUES
   "scratch",
   "cut",
   "double-kick",
-  "headbutt",
-  },
-  {
+  "headbutt"
+),
+(
   30,
   "nidorina",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/30.svg",
@@ -715,9 +716,9 @@ VALUES
   "scratch",
   "cut",
   "double-kick",
-  "headbutt",
-  },
-  {
+  "headbutt"
+),
+(
   31,
   "nidoqueen",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/31.svg",
@@ -738,9 +739,9 @@ VALUES
   "mega-punch",
   "pay-day",
   "fire-punch",
-  "ice-punch",
-  },
-  {
+  "ice-punch"
+),
+(
   32,
   "nidoking",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/34.svg",
@@ -761,9 +762,9 @@ VALUES
   "mega-punch",
   "pay-day",
   "fire-punch",
-  "ice-punch",
-  },
-  {
+  "ice-punch"
+),
+(
   33,
   "clefairy",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/35.svg",
@@ -784,9 +785,9 @@ VALUES
   "pound",
   "double-slap",
   "mega-punch",
-  "fire-punch",
-  },
-  {
+  "fire-punch"
+),
+(
   34,
   "clefable",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/36.svg",
@@ -807,9 +808,9 @@ VALUES
   "pound",
   "double-slap",
   "mega-punch",
-  "fire-punch",
-  },
-  {
+  "fire-punch"
+),
+(
   35,
   "vulpix",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/37.svg",
@@ -830,9 +831,9 @@ VALUES
   "headbutt",
   "tackle",
   "body-slam",
-  "take-down",
-  },
-  {
+  "take-down"
+),
+(
   36,
   "ninetales",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/38.svg",
@@ -853,9 +854,9 @@ VALUES
   "headbutt",
   "tackle",
   "body-slam",
-  "take-down",
-  },
-  {
+  "take-down"
+),
+(
   37,
   "jigglypuff",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/39.svg",
@@ -876,9 +877,9 @@ VALUES
   "pound",
   "double-slap",
   "mega-punch",
-  "fire-punch",
-  },
-  {
+  "fire-punch"
+),
+(
   38,
   "wigglytuff",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/40.svg",
@@ -899,9 +900,9 @@ VALUES
   "pound",
   "double-slap",
   "mega-punch",
-  "fire-punch",
-  },
-  {
+  "fire-punch"
+),
+(
   39,
   "zubat",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/41.svg",
@@ -922,9 +923,9 @@ VALUES
   "razor-wind",
   "gust",
   "wing-attack",
-  "whirlwind",
-  },
-  {
+  "whirlwind"
+),
+(
   40,
   "golbat",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/42.svg",
@@ -945,9 +946,9 @@ VALUES
   "razor-wind",
   "wing-attack",
   "whirlwind",
-  "fly",
-  },
-  {
+  "fly"
+),
+(
   41,
   "oddish",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/43.svg",
@@ -968,9 +969,9 @@ VALUES
   "swords-dance",
   "cut",
   "headbutt",
-  "take-down",
-  },
-  {
+  "take-down"
+),
+(
   42,
   "gloom",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/44.svg",
@@ -991,9 +992,9 @@ VALUES
   "swords-dance",
   "cut",
   "headbutt",
-  "take-down",
-  },
-  {
+  "take-down"
+),
+(
   43,
   "vileplume",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/45.svg",
@@ -1014,9 +1015,9 @@ VALUES
   "swords-dance",
   "cut",
   "headbutt",
-  "body-slam",
-  },
-  {
+  "body-slam"
+),
+(
   44,
   "paras",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/46.svg",
@@ -1037,9 +1038,9 @@ VALUES
   "scratch",
   "swords-dance",
   "cut",
-  "headbutt",
-  },
-  {
+  "headbutt"
+),
+(
   45,
   "parasect",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/47.svg",
@@ -1060,9 +1061,9 @@ VALUES
   "scratch",
   "swords-dance",
   "cut",
-  "headbutt",
-  },
-  {
+  "headbutt"
+),
+(
   46,
   "venonat",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/48.svg",
@@ -1083,9 +1084,9 @@ VALUES
   "headbutt",
   "tackle",
   "take-down",
-  "double-edge",
-  },
-  {
+  "double-edge"
+),
+(
   47,
   "venomoth",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/49.svg",
@@ -1106,9 +1107,9 @@ VALUES
   "razor-wind",
   "gust",
   "whirlwind",
-  "headbutt",
-  },
-  {
+  "headbutt"
+),
+(
   48,
   "diglett",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/50.svg",
@@ -1129,9 +1130,9 @@ VALUES
   "scratch",
   "cut",
   "sand-attack",
-  "headbutt",
-  },
-  {
+  "headbutt"
+),
+(
   49,
   "dugtrio",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/51.svg",
@@ -1152,9 +1153,9 @@ VALUES
   "scratch",
   "cut",
   "sand-attack",
-  "headbutt",
-  },
-  {
+  "headbutt"
+),
+(
   50,
   "meowth",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/52.svg",
@@ -1175,9 +1176,9 @@ VALUES
   "pay-day",
   "scratch",
   "cut",
-  "headbutt",
-  },
-  {
+  "headbutt"
+),
+(
   51,
   "persian",
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/53.svg",
@@ -1198,5 +1199,5 @@ VALUES
   "pay-day",
   "scratch",
   "cut",
-  "headbutt",
-  };
+  "headbutt"
+);
