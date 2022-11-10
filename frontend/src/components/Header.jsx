@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import NavbarWindow from "./Navbar/NavbarWindow";
 import Search from "./Search";
+
 import Burger from "../assets/Burger.png";
 import Panier from "../assets/panier.png";
 import Logo from "../assets/logo.png";
