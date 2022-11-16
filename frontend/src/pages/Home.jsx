@@ -1,3 +1,5 @@
+import React from "react";
+
 import "../Home.css";
 
 function Home() {
@@ -33,7 +35,7 @@ function Home() {
                 align-self-end"
                   type="button"
                 >
-                  Shop Now
+                  Adopt Now
                 </button>
               </div>
             </div>
@@ -42,7 +44,7 @@ function Home() {
               <h3 className="newsTitle m-2">Is it hard to choose?</h3>
               <div className="imgNewsHome d-flex">
                 <img
-                  src="https://media.discordapp.net/attachments/1019616949627531304/1037679391397908500/unknown.png"
+                  src=".\src\assets\Hard_choose_home.png"
                   alt=""
                   className="w-50 p-2"
                 />
@@ -56,7 +58,7 @@ function Home() {
                   btn btn-success rounded align-self-end"
                   type="button"
                 >
-                  Shop Now
+                  Adopt Now
                 </button>
               </div>
             </div>
@@ -78,7 +80,7 @@ function Home() {
                     btn btn-success rounded"
                     type="button"
                   >
-                    Shop Now
+                    Adopt Now
                   </button>
                 </div>
               </div>
@@ -86,58 +88,58 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="bestSellersHome container-fluid">
+      <div className="bestSellersHome">
         <div className="HBest  mt-5">
           <h1 className="titleHome text-center m-3">BEST SELLERS</h1>
         </div>
         <div
           id="carouselCaptionsHome"
-          className="carousel slide shadow container-fluid"
+          className="carousel slide"
           data-bs-ride="carousel"
         >
           <div className="carousel-indicators m-0">
             <button
               type="button"
-              data-bs-target="#carouselCaptions"
+              data-bs-target="#carouselCaptionsHome"
               data-bs-slide-to="0"
-              className="active bg-success"
+              className="active"
               aria-current="true"
               aria-label="Slide 1"
             />
             <button
-              className="bg-success"
+              className=""
               type="button"
-              data-bs-target="#carouselCaptions"
+              data-bs-target="#carouselCaptionsHome"
               data-bs-slide-to="1"
               aria-label="Slide 2"
             />
             <button
-              className="bg-success"
+              className=""
               type="button"
-              data-bs-target="#carouselCaptions"
+              data-bs-target="#carouselCaptionsHome"
               data-bs-slide-to="2"
               aria-label="Slide 3"
             />
             <button
-              className="bg-success"
+              className=""
               type="button"
-              data-bs-target="#carouselCaptions"
+              data-bs-target="#carouselCaptionsHome"
               data-bs-slide-to="3"
               aria-label="Slide 4"
             />
             <button
-              className="bg-success"
+              className=""
               type="button"
-              data-bs-target="#carouselCaptions"
+              data-bs-target="#carouselCaptionsHome"
               data-bs-slide-to="4"
               aria-label="Slide 5"
             />
           </div>
-          <div className="carousel-inner h-200">
+          <div className="carousel-inner">
             <div className="carousel-item active">
               <img
                 src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg"
-                className="imgSliderHome d-block w-75"
+                className="d-block w-75"
                 alt="..."
               />
               <div className="btnSliderHome d-flex justify-content-center">
@@ -154,7 +156,7 @@ function Home() {
             <div className="carousel-item">
               <img
                 src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
-                className="imgSliderHome d-block w-75"
+                className="d-block w-75"
                 alt="..."
               />
               <div className="btnSliderHome d-flex justify-content-center">
@@ -171,7 +173,7 @@ function Home() {
             <div className="carousel-item">
               <img
                 src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg"
-                className="imgSliderHome d-block w-75"
+                className="d-block w-75"
                 alt="..."
               />
               <div className="btnSliderHome d-flex justify-content-center">
@@ -188,7 +190,7 @@ function Home() {
             <div className="carousel-item">
               <img
                 src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/30.svg"
-                className="imgSliderHome d-block w-75"
+                className="d-block w-75"
                 alt="..."
               />
               <div className="btnSliderHome d-flex justify-content-center">
@@ -205,7 +207,7 @@ function Home() {
             <div className="carousel-item">
               <img
                 src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
-                className="imgSliderHome d-block w-75"
+                className="d-block w-75"
                 alt="..."
               />
               <div className="btnSliderHome d-flex justify-content-center">
@@ -223,11 +225,11 @@ function Home() {
           <button
             className="carousel-control-prev"
             type="button"
-            data-bs-target="#carouselCaptions"
+            data-bs-target="#carouselCaptionsHome"
             data-bs-slide="prev"
           >
             <span
-              className="carousel-control-prev-icon bg-success rounded-circle"
+              className="sliderArrowHome carousel-control-prev-icon  rounded-circle"
               aria-hidden="true"
             />
             <span className="visually-hidden">Previous</span>
@@ -235,11 +237,11 @@ function Home() {
           <button
             className="carousel-control-next"
             type="button"
-            data-bs-target="#carouselCaptions"
+            data-bs-target="#carouselCaptionsHome"
             data-bs-slide="next"
           >
             <span
-              className="carousel-control-next-icon bg-success rounded-circle"
+              className="sliderArrowHome carousel-control-next-icon  rounded-circle"
               aria-hidden="true"
             />
             <span className="visually-hidden">Next</span>
