@@ -24,15 +24,15 @@ function Basket() {
             <div className="summary-order container">
               <br />
               <h1 className="text-center">Summary of orders</h1>
-              <div className="d-flex mb-3 p-2 w-100 justify-content-between my-3">
+              <div className="price-product d-flex mb-3 p-2 w-100 justify-content-between my-3">
                 <h3>Total items</h3>
                 <h4>10$</h4>
               </div>
-              <div className="d-flex mb-3 p-2 w-100 justify-content-between">
+              <div className="price-tva d-flex mb-3 p-2 w-100 justify-content-between">
                 <p>Including TVA</p>
                 <p>0.99$</p>
               </div>
-              <div className="d-flex mb-3 p-2 w-100 justify-content-between">
+              <div className="delivery d-flex mb-3 p-2 w-100 justify-content-between">
                 <h3>Delivery cost</h3>
                 <h4>FREE</h4>
               </div>

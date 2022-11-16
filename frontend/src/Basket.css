@@ -2,12 +2,12 @@
   font-family: "Noto Sans";
 }
 
-.btn {
-  background-color: #2a4f3f;
-}
-
 .btn-link {
   color: #2a4f3f;
+}
+
+.btn-delete {
+  border: none;
 }
 
 .body-basket,
@@ -30,7 +30,6 @@
 }
 
 @media (min-width: 768px) {
-
   .valide-basket-mobile {
     display: none;
   }
