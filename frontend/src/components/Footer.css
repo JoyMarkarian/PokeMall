@@ -1,0 +1,28 @@
+.picto-rs {
+  width: 40px;
+}
+
+.footer {
+  background-color: #edf1ef;
+}
+
+@media (min-width: 768px) {
+  .footer-lien {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    margin-top: 5rem;
+    font-size: 20px;
+  }
+  .partner-lien {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 150px;
+  }
+  .footer-condition {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,64 @@
+.all-products {
+  background-color: #edf1ef;
+  font-family: "Noto Sans";
+}
+
+.all-products-title {
+  font-family: "Oswald";
+  margin-bottom: 50px;
+}
+
+.card-pokemon {
+  width: 45%;
+  border-color: #2a4f3f;
+  border-width: 2px;
+  padding: 1%;
+  margin: 1%;
+  background-color: #edf1ef;
+}
+.card-title {
+  margin-bottom: 1px;
+}
+
+.card-index {
+  margin-bottom: 2px;
+}
+
+.btn-card {
+  background-color: #2a4f3f;
+  border-color: #2a4f3f;
+}
+
+.sort-by {
+  margin-left: 1%;
+  margin-bottom: 10px;
+}
+
+.select-sort {
+  width: 45%;
+  border-color: #2a4f3f;
+  border-width: 1px;
+  background-color: #edf1ef;
+}
+
+.list-group {
+  width: 20%;
+}
+
+@media screen and (min-width: 769px) {
+  .card-pokemon {
+    width: 20%;
+  }
+
+  .select-sort {
+    width: 15%;
+  }
+
+  .card-pokemon {
+    margin: 1%;
+  }
+
+  .sort-by {
+    margin-left: 6%;
+  }
+}
