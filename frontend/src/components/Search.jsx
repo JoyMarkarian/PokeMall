@@ -4,9 +4,9 @@ import searchIcon from "../assets/search.svg";
 
 function Search({ search, handleSearch, setPage }) {
   return (
-    <div className="form-control me-2 d-flex">
+    <div className="search-bar form-control me-2 d-flex">
       <input
-        className="border-0"
+        className="search-field border-0"
         type="search"
         placeholder="Search"
         aria-label="Search"
@@ -17,7 +17,7 @@ function Search({ search, handleSearch, setPage }) {
         }
       />
 
-      <img src={searchIcon} alt="searchIcon" />
+      <img className="search-icon" src={searchIcon} alt="searchIcon" />
     </div>
   );
 }

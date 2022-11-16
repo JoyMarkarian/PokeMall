@@ -36,7 +36,7 @@ function PokemonList({ search }) {
   return (
     <div className="all-products">
       <div>
-        <h1 className="all-products-title text-center">All Products</h1>
+        <h1 className="all-products-title text-center">ALL PRODUCTS</h1>
       </div>
       <div className="form-global">
         <div className="form-floating sort-by">
