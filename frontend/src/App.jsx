@@ -29,7 +29,7 @@ function App() {
       {page.path === "one Product" && (
         <OneProduct pokemon={pokemons[page.index - 1]} setPage={setPage} />
       )}
-      {page.path === "Contact" && <Footer />}
+      <Footer />
     </div>
   );
 }
