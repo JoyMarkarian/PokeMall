@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import NavbarWindow from "./Navbar/NavbarWindow";
 import Search from "./Search";
@@ -48,14 +49,14 @@ export default function Header({ setPage, search, handleSearch }) {
           />
         </div>
         <div className="p-2 text-center align-middle">
-          <button
-            type="button"
-            className="border-0"
-            onClick={() => setPage({ path: "Basket", index: null })}
-          >
-            <img src={Panier} className="basket img-fluid" alt="panier" />
+          <Link to="/cart" className="border-0">
+            <img
+              src={Panier}
+              className="basket basket-label img-fluid"
+              alt="panier"
+            />
             <p className="d-none d-md-block m-0">Cart</p>
-          </button>
+          </Link>
         </div>
       </div>
       {toggleMenuMobile && (
