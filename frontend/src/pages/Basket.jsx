@@ -13,7 +13,7 @@ function Basket() {
   return (
     <div className="body-basket md">
       <div className="container md">
-        <h1 className="text-center">Basket</h1>
+        <h1 className="text-center">BASKET</h1>
         <div className="basket-dekstop row">
           <div className="col-md-8 md-w-75">
             {panier.map((el) => (
@@ -46,7 +46,7 @@ function Basket() {
               </div>
             </div>
 
-            <div className="my-2">
+            <div className="my-2 container">
               <h1 className="m-3 d-flex justify-content-center">Delivery</h1>
               <div className="delivery-basket form-check m-2">
                 <input
