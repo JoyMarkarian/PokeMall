@@ -1,3 +1,5 @@
+import React from "react";
+
 import "../Home.css";
 
 function Home() {
@@ -86,58 +88,58 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="bestSellersHome container-fluid">
+      <div className="bestSellersHome">
         <div className="HBest  mt-5">
           <h1 className="titleHome text-center m-3">BEST SELLERS</h1>
         </div>
         <div
           id="carouselCaptionsHome"
-          className="carousel slide container-fluid rounded shadow"
+          className="carousel slide"
           data-bs-ride="carousel"
         >
           <div className="carousel-indicators m-0">
             <button
               type="button"
-              data-bs-target="#carouselCaptions"
+              data-bs-target="#carouselCaptionsHome"
               data-bs-slide-to="0"
-              className="active "
+              className="active"
               aria-current="true"
               aria-label="Slide 1"
             />
             <button
               className=""
               type="button"
-              data-bs-target="#carouselCaptions"
+              data-bs-target="#carouselCaptionsHome"
               data-bs-slide-to="1"
               aria-label="Slide 2"
             />
             <button
               className=""
               type="button"
-              data-bs-target="#carouselCaptions"
+              data-bs-target="#carouselCaptionsHome"
               data-bs-slide-to="2"
               aria-label="Slide 3"
             />
             <button
               className=""
               type="button"
-              data-bs-target="#carouselCaptions"
+              data-bs-target="#carouselCaptionsHome"
               data-bs-slide-to="3"
               aria-label="Slide 4"
             />
             <button
               className=""
               type="button"
-              data-bs-target="#carouselCaptions"
+              data-bs-target="#carouselCaptionsHome"
               data-bs-slide-to="4"
               aria-label="Slide 5"
             />
           </div>
-          <div className="carousel-inner h-200">
+          <div className="carousel-inner">
             <div className="carousel-item active">
               <img
                 src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg"
-                className="imgSliderHome d-block w-75"
+                className="d-block w-75"
                 alt="..."
               />
               <div className="btnSliderHome d-flex justify-content-center">
@@ -154,7 +156,7 @@ function Home() {
             <div className="carousel-item">
               <img
                 src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
-                className="imgSliderHome d-block w-75"
+                className="d-block w-75"
                 alt="..."
               />
               <div className="btnSliderHome d-flex justify-content-center">
@@ -171,13 +173,13 @@ function Home() {
             <div className="carousel-item">
               <img
                 src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg"
-                className="imgSliderHome d-block w-75"
+                className="d-block w-75"
                 alt="..."
               />
               <div className="btnSliderHome d-flex justify-content-center">
                 <button
                   className="bNews
-                rounded
+                btn btn-success rounded
                 "
                   type="button"
                 >
@@ -188,7 +190,7 @@ function Home() {
             <div className="carousel-item">
               <img
                 src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/30.svg"
-                className="imgSliderHome d-block w-75"
+                className="d-block w-75"
                 alt="..."
               />
               <div className="btnSliderHome d-flex justify-content-center">
@@ -205,7 +207,7 @@ function Home() {
             <div className="carousel-item">
               <img
                 src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
-                className="imgSliderHome d-block w-75"
+                className="d-block w-75"
                 alt="..."
               />
               <div className="btnSliderHome d-flex justify-content-center">
@@ -223,7 +225,7 @@ function Home() {
           <button
             className="carousel-control-prev"
             type="button"
-            data-bs-target="#carouselCaptions"
+            data-bs-target="#carouselCaptionsHome"
             data-bs-slide="prev"
           >
             <span
@@ -235,7 +237,7 @@ function Home() {
           <button
             className="carousel-control-next"
             type="button"
-            data-bs-target="#carouselCaptions"
+            data-bs-target="#carouselCaptionsHome"
             data-bs-slide="next"
           >
             <span
