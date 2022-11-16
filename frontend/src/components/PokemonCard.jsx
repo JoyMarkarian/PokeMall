@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import "../PokemonList.css";
 
 function PokemonCard({ pokemon }) {
@@ -15,9 +17,12 @@ function PokemonCard({ pokemon }) {
         Pokedex index : {pokemon.pokedex_index}
       </p>
       <h3 className="card-price text-center">Price : {pokemon.price}$</h3>
-      <button type="button" className="btn btn-card btn-success">
+      <Link
+        to={`/products/${pokemon.pokedex_index}`}
+        className="btn btn-card btn-success"
+      >
         Show product
-      </button>
+      </Link>
     </div>
   );
 }
