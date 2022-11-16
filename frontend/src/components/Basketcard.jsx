@@ -1,7 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 function Basketcard() {
-  let quantity = 1;
+  const [quantity, setQuantity] = useState(1);
   const price = 10;
   return (
     <div className="product row border-bottom">
@@ -17,7 +17,7 @@ function Basketcard() {
         <div className="product-basket w-30 d-inline-block justify-content-center md">
           <label htmlFor="floatingSelect">Quantity</label>
           <select
-            onChange={(e) => quantity = e.target.value}
+            onChange={(e) => setQuantity(e.target.value)}
             className="quantity form-select"
             id="quantitySelect"
           >
@@ -37,6 +37,7 @@ function Basketcard() {
           Delete
         </button>
         <h3 className="my-3">Price : {price}$</h3>
+        <h4 className="my-3">Total price : {quantity * price}$</h4>
       </div>
     </div>
   );
