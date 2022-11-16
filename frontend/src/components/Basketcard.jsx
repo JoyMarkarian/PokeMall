@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 function Basketcard() {
+  const [setQuantity] = useState(1);
+  const price = 10;
   return (
     <div className="product row border-bottom">
       <div className="img-basket col-6 my-5">
@@ -12,43 +16,27 @@ function Basketcard() {
         <h2 className="my-5">Bulbizar</h2>
         <div className="product-basket w-30 d-inline-block justify-content-center md">
           <label htmlFor="floatingSelect">Quantity</label>
-          <select className="quantity form-select" id="quantitySelect">
-            <option value="1">
-              <b>1</b>
-            </option>
-            <option value="2">
-              <b>2</b>
-            </option>
-            <option value="3">
-              <b>3</b>
-            </option>
-            <option value="4">
-              <b>4</b>
-            </option>
-            <option value="5">
-              <b>5</b>
-            </option>
-            <option value="6">
-              <b>6</b>
-            </option>
-            <option value="7">
-              <b>7</b>
-            </option>
-            <option value="8">
-              <b>8</b>
-            </option>
-            <option value="9">
-              <b>9</b>
-            </option>
-            <option value="10">
-              <b>10</b>
-            </option>
+          <select
+            onChange={(e) => setQuantity(e.target.value)}
+            className="quantity form-select"
+            id="quantitySelect"
+          >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
           </select>
         </div>
         <button type="button" className="btn-delete btn btn-link my-2">
           Delete
         </button>
-        <h3 className="my-3">Price : 10$</h3>
+        <h3 className="my-3">Price : {price}$</h3>
       </div>
     </div>
   );
