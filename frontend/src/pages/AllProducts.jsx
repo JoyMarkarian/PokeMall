@@ -1,9 +1,9 @@
 import PokemonList from "../components/PokemonList";
 
-function AllProducts() {
+function AllProducts({ search }) {
   return (
     <div>
-      <PokemonList />
+      <PokemonList search={search} />
     </div>
   );
 }
