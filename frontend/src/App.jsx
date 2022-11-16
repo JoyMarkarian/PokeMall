@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import AllProducts from "@pages/AllProducts";
 import Basket from "@pages/Basket";
@@ -14,23 +15,22 @@ import "./App.css";
 
 function App() {
   const [search, setSearch] = useState("");
-  const [page, setPage] = useState({ path: "Home", index: null });
 
   const handleSearch = (value) => {
     setSearch(value);
   };
 
   return (
-    <div className="App">
-      <Header setPage={setPage} search={search} handleSearch={handleSearch} />
-      {page.path === "Home" && <Home pokemons={pokemons} />}
-      {page.path === "Products" && <AllProducts search={search} />}
-      {page.path === "Basket" && <Basket />}
-      {page.path === "one Product" && (
-        <OneProduct pokemon={pokemons[page.index - 1]} setPage={setPage} />
-      )}
+    <Router>
+      <Header search={search} handleSearch={handleSearch} />
+      <Routes>
+        <Route path="/" element={<Home pokemons={pokemons} />} />
+        <Route path="/products" element={<AllProducts search={search} />} />
+        <Route path="/cart" element={<Basket />} />
+        <Route path="/products/:id" element={<OneProduct />} />
+      </Routes>
       <Footer />
-    </div>
+    </Router>
   );
 }
 

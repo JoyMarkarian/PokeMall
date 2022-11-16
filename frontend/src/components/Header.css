@@ -13,6 +13,11 @@ header{
   background-color: #edf1ef !important;
 }
 
+a {
+  text-decoration: none;
+  color: #2A4F3F ;
+}
+
 @media screen and (min-width: 769px) {
   .basket {
     width: 30px;
