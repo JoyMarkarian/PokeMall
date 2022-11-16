@@ -54,7 +54,7 @@ export default function Header({ setPage, search, handleSearch }) {
               src={Panier}
               className="basket basket-label img-fluid"
               alt="panier"
-            />{" "}
+            />
             <p className="d-none d-md-block m-0">Cart</p>
           </Link>
         </div>
