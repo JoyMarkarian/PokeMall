@@ -34,7 +34,7 @@ function Form() {
           <div className=" col -12 text-end mt-2">
             <button
               type="submit"
-              className="btn btn-warning mb-2 contactButton textRegular"
+              className="btn btn-success mb-2 contactButton textRegular"
             >
               Send
             </button>
