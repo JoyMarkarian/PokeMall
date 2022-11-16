@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Basketcard from "@components/Basketcard";
+import Basketcard from "../components/Basketcard";
 
 import "../Basket.css";
 
@@ -15,8 +15,12 @@ function Basket({ panier, handleDeletPanier }) {
         <h1 className="text-center">BASKET</h1>
         <div className="basket-dekstop row">
           <div className="col-md-8 md-w-75">
-            {panier.map((el) => (
-              <Basketcard key={el} handleDeletPanier={handleDeletPanier} />
+            {panier.map((pokemon) => (
+              <Basketcard
+                key={pokemon.pokedex_index}
+                handleDeletPanier={handleDeletPanier}
+                pokemon={pokemon}
+              />
             ))}
           </div>
           <div className="card-summary col-md-4 card md-w-50">

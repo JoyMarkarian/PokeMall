@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+// eslint-disable-next-line import/no-unresolved
 import AllProducts from "@pages/AllProducts";
+// eslint-disable-next-line import/no-unresolved
 import Basket from "@pages/Basket";
+// eslint-disable-next-line import/no-unresolved
 import Home from "@pages/Home";
+// eslint-disable-next-line import/no-unresolved
 import OneProduct from "@pages/OneProduct";
 
 import Footer from "./components/Footer";
@@ -27,7 +31,9 @@ function App() {
     setPanier(newPanier);
   };
   const handleDeletPanier = (toDelete) => {
-    const newPanier = panier.filter((pokemon) => pokemon.id !== toDelete.id);
+    const newPanier = panier.filter(
+      (pokemon) => pokemon.pokedex_index !== toDelete.pokedex_index
+    );
     setPanier(newPanier);
   };
   return (

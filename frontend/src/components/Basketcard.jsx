@@ -1,19 +1,15 @@
 import React, { useState } from "react";
 
-function Basketcard({ handleDeletPanier }) {
+function Basketcard({ handleDeletPanier, pokemon }) {
+  const { url, name, price } = pokemon;
   const [quantity, setQuantity] = useState(1);
-  const price = 10;
   return (
     <div className="product row border-bottom">
       <div className="img-basket col-6 my-5">
-        <img
-          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
-          className="img float-start img-fluid"
-          alt="pokemon"
-        />
+        <img src={url} className="img float-start img-fluid" alt="pokemon" />
       </div>
       <div className="basket-top col-6">
-        <h2 className="my-5">Bulbizar</h2>
+        <h2 className="my-5">{name}</h2>
         <div className="product-basket w-30 d-inline-block justify-content-center md">
           <label htmlFor="floatingSelect">Quantity</label>
           <select
@@ -36,7 +32,7 @@ function Basketcard({ handleDeletPanier }) {
         <button
           type="button"
           className="btn-delete btn btn-link my-2"
-          onClick={() => handleDeletPanier()}
+          onClick={() => handleDeletPanier(pokemon)}
         >
           Delete
         </button>
