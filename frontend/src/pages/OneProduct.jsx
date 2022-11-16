@@ -7,7 +7,7 @@ import Avis from "@components/Avis";
 import img from "../assets/previous.png";
 import img2 from "../assets/next.png";
 
-function OneProduct() {
+function OneProduct({ handlePanier }) {
   const { id } = useParams();
   const [pokemon, setPokemon] = useState({});
   useEffect(() => {
@@ -93,6 +93,7 @@ function OneProduct() {
             <button
               type="button"
               className="btn btn-warning shadow textRegular mt-1"
+              onClick={() => handlePanier(pokemon)}
             >
               Add to cart
             </button>

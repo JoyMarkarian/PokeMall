@@ -4,8 +4,7 @@ import Basketcard from "@components/Basketcard";
 
 import "../Basket.css";
 
-function Basket() {
-  const panier = [1, 2];
+function Basket({ panier, handleDeletPanier }) {
   const [deliveryOption, setDeliveryOption] = useState("1");
   const handleChange = (e) => {
     setDeliveryOption(e.target.value);
@@ -17,7 +16,7 @@ function Basket() {
         <div className="basket-dekstop row">
           <div className="col-md-8 md-w-75">
             {panier.map((el) => (
-              <Basketcard key={el} />
+              <Basketcard key={el} handleDeletPanier={handleDeletPanier} />
             ))}
           </div>
           <div className="card-summary col-md-4 card md-w-50">

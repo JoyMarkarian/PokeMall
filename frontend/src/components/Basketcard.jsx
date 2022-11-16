@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Basketcard() {
+function Basketcard({ handleDeletPanier }) {
   const [quantity, setQuantity] = useState(1);
   const price = 10;
   return (
@@ -33,7 +33,11 @@ function Basketcard() {
             <option value="10">10</option>
           </select>
         </div>
-        <button type="button" className="btn-delete btn btn-link my-2">
+        <button
+          type="button"
+          className="btn-delete btn btn-link my-2"
+          onClick={() => handleDeletPanier()}
+        >
           Delete
         </button>
         <h3 className="my-3">Price : {price}$</h3>
