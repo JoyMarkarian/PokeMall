@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 import "../PokemonList.css";
 
@@ -17,12 +17,12 @@ function PokemonCard({ pokemon }) {
         Pokedex index : {pokemon.pokedex_index}
       </p>
       <h3 className="card-price text-center">Price : {pokemon.price}$</h3>
-      <Link
-        to={`/products/${pokemon.pokedex_index}`}
+      <HashLink
+        to={`/products/${pokemon.pokedex_index}#`}
         className="btn btn-card btn-success"
       >
         Show product
-      </Link>
+      </HashLink>
     </div>
   );
 }
