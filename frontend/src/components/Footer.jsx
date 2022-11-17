@@ -15,14 +15,14 @@ export default function Footer() {
         <div className="container text-center">
           <div className="footer-lien row mt-5">
             <div className="footer-condition text-center col-6 p-1">
-              <h1 className="fs-4 mb-3">Legal Informations </h1>
+              <h1 className="title-footer fs-4 mb-3">Legal Informations </h1>
               <p>Terms of sales</p>
               <p>Privacy Policy</p>
               <p>Cookie settings</p>
               <p>Legal Notice</p>
             </div>
             <div className="partner-lien col-6 col-sm-4 p-1 text-center">
-              <h1 className="fs-4 mb-3">Partner sites</h1>
+              <h1 className="title-footer fs-4 mb-3">Partner sites</h1>
               <p>Lien 1</p>
               <p>Lien 2</p>
               <p>Lien 3</p>
