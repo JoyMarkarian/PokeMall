@@ -27,7 +27,9 @@ function App() {
     setPanier(newPanier);
   };
   const handleDeletPanier = (toDelete) => {
-    const newPanier = panier.filter((pokemon) => pokemon.id !== toDelete.id);
+    const newPanier = panier.filter(
+      (pokemon) => pokemon.pokedex_index !== toDelete.pokedex_index
+    );
     setPanier(newPanier);
   };
   return (
