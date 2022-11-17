@@ -28,7 +28,7 @@ function Form() {
   return (
     <div className="formBG m-0 pt-4">
       <form className="container" id="form" ref={form} onSubmit={sendEmail}>
-        <h1 className="text-center fs-1 mb-4 importantText">Contact</h1>
+        <h1 className="text-center fs-1 mb-4 importantText">CONTACT</h1>
         <div className="container row m-0">
           <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex flex-column align-items-center align-items-sm-center align-items-md-end align-items-lg-end align-items-xl-end">
             <input
@@ -66,7 +66,7 @@ function Form() {
             <button
               type="submit"
               onClick={() => sendEmail}
-              className="btn btn-success mb-2 contactButton textRegular"
+              className="btn formSendButton mb-2 contactButton textRegular"
             >
               Send
             </button>
