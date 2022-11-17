@@ -66,7 +66,7 @@ function Form() {
             <button
               type="submit"
               onClick={() => sendEmail}
-              className="btn formSendButton mb-2 contactButton textRegular"
+              className="btn btn-success formSendButton mb-2 contactButton textRegular"
             >
               Send
             </button>
