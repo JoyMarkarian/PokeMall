@@ -46,8 +46,7 @@ function Basket({ panier, handleDeletPanier }) {
             </div>
             <div className="my-2">
               <h1 className="title-basket m-3 d-flex justify-content-center pb-2">
-                {" "}
-                Delivery{" "}
+                Delivery
               </h1>
               <div className="delivery-basket form-check m-2">
                 <input
