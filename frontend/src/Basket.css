@@ -1,5 +1,16 @@
 .body-basket {
   font-family: "Noto Sans";
+  background-color: #edf1ef;
+  color: #2a4f3f;
+}
+
+.title-basket {
+  font-family: "Oswald";
+  color: #2a4f3f;
+}
+
+.title-cart {
+  padding: 20px;
 }
 
 .btn-link {
@@ -22,11 +33,15 @@
 
 .valide-basket {
   display: none;
+  background-color: #2a4f3f;
 }
 
 .btn-delete {
   background-color: transparent;
   border-radius: none;
+}
+.btn-valide-mobile {
+  background-color: #2a4f3f;
 }
 
 @media (min-width: 768px) {
