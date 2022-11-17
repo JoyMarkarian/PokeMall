@@ -20,7 +20,7 @@ export default function Header({ setPage, search, handleSearch }) {
     <header>
       <div className="d-flex align-items-center justify-content-around ">
         <div className="p-2 d-none d-md-block">
-          <Link to="/" className="link-navbar p-3 flex-fill border-0">
+          <Link to="/">
             <img src={Logo} className="img-fluid w-50 h-50" alt="logo" />
           </Link>
         </div>
@@ -39,7 +39,7 @@ export default function Header({ setPage, search, handleSearch }) {
           </div>
         </div>
         <div className="p-2 text-center">
-          <Link to="/" className="link-navbar p-3 flex-fill border-0">
+          <Link to="/">
             <img
               src={Logo}
               className="logo img-fluid w-75 h-75 m-1 d-md-none"
