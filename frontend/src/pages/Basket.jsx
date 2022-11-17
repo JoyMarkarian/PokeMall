@@ -13,7 +13,7 @@ function Basket() {
   return (
     <div className="body-basket md">
       <div className="container md">
-        <h1 className="text-center">Basket</h1>
+        <h1 className="title-basket title-cart text-center">CART</h1>
         <div className="basket-dekstop row">
           <div className="col-md-8 md-w-75">
             {panier.map((el) => (
@@ -23,7 +23,7 @@ function Basket() {
           <div className="card-summary col-md-4 card md-w-50">
             <div className="summary-order container">
               <br />
-              <h1 className="text-center">Summary of orders</h1>
+              <h1 className="title-basket text-center">Summary of orders</h1>
               <div className="price-product d-flex mb-3 p-2 w-100 justify-content-between my-3">
                 <h3>Total items</h3>
                 <h4>10$</h4>
@@ -47,7 +47,10 @@ function Basket() {
             </div>
 
             <div className="my-2">
-              <h1 className="m-3 d-flex justify-content-center">Delivery</h1>
+              <h1 className="title-basket m-3 d-flex justify-content-center pb-2">
+                {" "}
+                Delivery{" "}
+              </h1>
               <div className="delivery-basket form-check m-2">
                 <input
                   className="form-check-input shadow-none"
@@ -101,7 +104,10 @@ function Basket() {
               </div>
             </div>
             <div className="valide-basket-mobile card m-3">
-              <button type="button" className="btn btn-success btn-lg">
+              <button
+                type="button"
+                className="btn-valide-mobile btn btn-success btn-lg"
+              >
                 Validate my order
               </button>
             </div>
