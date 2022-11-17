@@ -9,6 +9,12 @@
 
 .importantText {
   font-family: "Oswald", sans-serif;
+  color: #2A4F3F;
+}
+
+.formSendButton {
+  background-color: #2A4F3F;
+  color: white;
 }
 
 .textRegular {
