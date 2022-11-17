@@ -39,11 +39,13 @@ export default function Header({ setPage, search, handleSearch }) {
           </div>
         </div>
         <div className="p-2 text-center">
-          <img
-            src={Logo}
-            className="logo img-fluid w-75 h-75 m-1 d-md-none"
-            alt="logo"
-          />
+          <Link to="/" className="link-navbar p-3 flex-fill border-0">
+            <img
+              src={Logo}
+              className="logo img-fluid w-75 h-75 m-1 d-md-none"
+              alt="logo"
+            />
+          </Link>
           <Search
             search={search}
             handleSearch={handleSearch}
