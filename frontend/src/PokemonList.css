@@ -1,11 +1,12 @@
 .all-products {
   background-color: #edf1ef;
   font-family: "Noto Sans";
+  color: #2a4f3f;
 }
 
 .all-products-title {
   font-family: "Oswald";
-  margin-bottom: 50px;
+  padding: 20px;
 }
 
 .card-pokemon {
@@ -39,10 +40,6 @@
   border-color: #2a4f3f;
   border-width: 1px;
   background-color: #edf1ef;
-}
-
-.list-group {
-  width: 20%;
 }
 
 @media screen and (min-width: 769px) {

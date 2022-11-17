@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import AllProducts from "@pages/AllProducts";
 import Basket from "@pages/Basket";
@@ -14,23 +15,40 @@ import "./App.css";
 
 function App() {
   const [search, setSearch] = useState("");
-  const [page, setPage] = useState({ path: "Home", index: null });
+  const [panier, setPanier] = useState([]);
 
   const handleSearch = (value) => {
     setSearch(value);
   };
 
+  const handlePanier = (addCard) => {
+    const newPanier = panier;
+    newPanier.push(addCard);
+    setPanier(newPanier);
+  };
+  const handleDeletPanier = (toDelete) => {
+    const newPanier = panier.filter((pokemon) => pokemon.id !== toDelete.id);
+    setPanier(newPanier);
+  };
   return (
-    <div className="App">
-      <Header setPage={setPage} search={search} handleSearch={handleSearch} />
-      {page.path === "Home" && <Home pokemons={pokemons} />}
-      {page.path === "Products" && <AllProducts search={search} />}
-      {page.path === "Basket" && <Basket />}
-      {page.path === "one Product" && (
-        <OneProduct pokemon={pokemons[page.index - 1]} setPage={setPage} />
-      )}
+    <Router>
+      <Header search={search} handleSearch={handleSearch} />
+      <Routes>
+        <Route path="/" element={<Home pokemons={pokemons} />} />
+        <Route path="/products" element={<AllProducts search={search} />} />
+        <Route
+          path="/cart"
+          element={
+            <Basket panier={panier} handleDeletPanier={handleDeletPanier} />
+          }
+        />
+        <Route
+          path="/products/:id"
+          element={<OneProduct handlePanier={handlePanier} />}
+        />
+      </Routes>
       <Footer />
-    </div>
+    </Router>
   );
 }
 
