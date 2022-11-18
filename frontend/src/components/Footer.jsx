@@ -16,12 +16,12 @@ export default function Footer() {
       <div className="container w-100 p-1 border-top mt-4">
         <div className="footer-lien d-flex justify-content-evenly mt-4">
           <div className="footer-condition text-justify">
-            <h1 className="title-footer">LEGAL INFORMATIONS</h1>
+            <h1 className="title-footer mb-3">LEGAL INFORMATIONS</h1>
             <p className="mb-2">Terms of sales</p>
             <p className="mb-2">Privacy Policy</p>
           </div>
           <div className="menu-lien text-justify">
-            <h1 className="title-footer ">MENU</h1>
+            <h1 className="title-footer mb-3">MENU</h1>
             <p className="mb-2">
               <Link to="/">Home</Link>
             </p>
