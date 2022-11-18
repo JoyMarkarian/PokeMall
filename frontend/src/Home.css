@@ -1,0 +1,95 @@
+.homePage {
+  color: #2a4f3f;
+  font-family: noto sans, sans-serif;
+  background-color: #edf1ef;
+}
+
+.newsHomeDiv{
+width: 90%;
+margin: auto;
+}
+
+.titleHome {
+  font-family: oswald, sans-serif;
+  font-weight:bold;
+}
+
+.imageBck {
+  background-image: url("https://media.discordapp.net/attachments/1031472283761508363/1035485124269187092/unknown.png?width=1243&height=580");
+  background-size: cover;
+  height: 25vh;
+}
+
+h1.colorTitle {
+  color: #c2c4d1;
+  height: 25vh;
+}
+
+.lastArrival {
+  background-image: url(https://pm1.narvii.com/7243/0b36782d158f6da0639e38ebf94af3d5c37288c2r1-668-486v2_hq.jpg);
+  background-size: cover;
+  color:#2a4f3f;
+}
+
+.bNews{
+  height: 50px;
+  width: auto;
+  background-color: #2a4f3f;
+}
+
+.hardChoose {
+  background-image: url(https://pm1.narvii.com/7243/adcbbe4c769bbaf0858abef9625077294911804br1-593-534v2_hq.jpg);
+  background-size: cover;
+  color:#2a4f3f;
+}
+
+.imgNewsHome{
+  height: 100%;
+}
+
+.season {
+  background-image: url(https://us.123rf.com/450wm/elvil/elvil1303/elvil130300040/18684091-fond-bleu-carte-de-no%C3%ABl-avec-des-flocons-de-neige.jpg);
+  background-size: cover;
+  height: 30vh;
+}
+
+.newsTitle {
+  text-align: center;
+}
+
+.carousel-item img {
+  height: 40vh;
+  margin: 15px auto;
+}
+
+#carouselCaptionsHome{
+  background-image: url(https://ak2.picdn.net/shutterstock/videos/1040337182/thumb/1.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 55vh;
+  width: 90%;
+  margin: auto;
+}
+
+@media screen and (min-width: 769px) {
+  .imageBck {
+    background-position: 50% 50%;
+    height: 50vh;
+  }
+
+  h1.colorTitle {
+    height: 50vh;
+  }
+
+  .newsHomeDiv{
+    width: 80%;
+    }
+
+    #carouselCaptionsHome{
+      width: 80%;
+    }
+
+  #carouselHome {
+    height: 80vh;
+  }
+} ;

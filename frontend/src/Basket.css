@@ -1,0 +1,62 @@
+.body-basket {
+  font-family: "Noto Sans";
+  background-color: #edf1ef;
+  color: #2a4f3f;
+}
+
+.title-basket {
+  font-family: "Oswald";
+  color: #2a4f3f;
+}
+
+.title-cart {
+  padding: 20px;
+}
+
+.btn-link {
+  color: #2a4f3f;
+}
+
+.btn-delete {
+  border: none;
+}
+
+.body-basket,
+.card {
+  background-color: #edf1ef;
+}
+
+.form-check-input:checked {
+  background-color: #2a4f3f;
+  border-color: #2a4f3f;
+}
+
+.valide-basket {
+  display: none;
+  background-color: #2a4f3f;
+}
+
+.btn-delete {
+  background-color: transparent;
+  border-radius: none;
+}
+.btn-valide-mobile {
+  background-color: #2a4f3f;
+}
+
+@media (min-width: 768px) {
+  .valide-basket-mobile {
+    display: none;
+  }
+
+  .basket-dekstop {
+    display: flex;
+  }
+
+  .summary-oder,
+  .valide-basket {
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+}

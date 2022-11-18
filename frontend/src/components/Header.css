@@ -1,0 +1,40 @@
+header{
+  background-color: #edf1ef;
+  color:#2A4F3F !important;
+  border: solid #2A4F3F;
+  list-style-type: none;
+}
+.nav-link{
+  color:#2A4F3F !important;
+}
+.navbarMobile{
+  list-style-type: none;
+  padding: 0px;
+  background-color: #edf1ef !important;
+}
+
+a {
+  text-decoration: none;
+  color: #2A4F3F ;
+}
+
+.link-navbar {
+  font-family: Oswald;
+  font-size: 25px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.basket-label, .search-field {
+  color:#2A4F3F;
+  font-family: Noto Sans;
+}
+
+@media screen and (min-width: 769px) {
+  .basket {
+    width: 30px;
+  }
+}
