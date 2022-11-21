@@ -4,6 +4,9 @@ import { useParams, Link } from "react-router-dom";
 import PokemonStat from "@components/PokemonStat";
 import Avis from "@components/Avis";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import img from "../assets/previous.png";
 import img2 from "../assets/next.png";
 
@@ -16,6 +19,25 @@ function OneProduct({ handlePanier }) {
       .then((data) => setPokemon(data))
       .catch((err) => console.error(err));
   }, [id]);
+
+  const notify = () => {
+    toast.success("Your pokemon is sent to your shopping cart", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
+
+  const addAndNotify = () => {
+    handlePanier(pokemon);
+    notify();
+  };
+
   const {
     url,
     name,
@@ -93,7 +115,7 @@ function OneProduct({ handlePanier }) {
             <button
               type="button"
               className="btn btn-warning shadow textRegular mt-1"
-              onClick={() => handlePanier(pokemon)}
+              onClick={() => addAndNotify()}
             >
               Add to cart
             </button>
@@ -201,6 +223,18 @@ function OneProduct({ handlePanier }) {
           <Avis />
         </div>
       </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </div>
   );
 }
