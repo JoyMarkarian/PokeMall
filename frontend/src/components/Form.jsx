@@ -1,8 +1,25 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Form() {
   const form = useRef();
+  const notify = () => {
+    toast.success(
+      "Your message was successfully sent and you will receive an answer very soon",
+      {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      }
+    );
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -59,20 +76,33 @@ function Form() {
             <textarea
               name="Message"
               placeholder="Message"
+              required
               className="rounded w-75 h-100"
             />
           </div>
           <div className=" col -12 text-end mt-2">
             <button
               type="submit"
-              onClick={() => sendEmail}
-              className="btn formSendButton mb-2 contactButton textRegular"
+              onClick={notify}
+              className="btn btn-success text-white formSendButton mb-2 contactButton textRegular"
             >
               Send
             </button>
           </div>
         </div>
       </form>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </div>
   );
 }
