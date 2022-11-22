@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import editMeta from "@services/seo";
 
@@ -7,15 +8,21 @@ import "../Home.css";
 function Home() {
 
   const [randomData, setRandomData] = useState([]);
+  const [random1Data, setRandom1Data] = useState([])
 
   useEffect(() => {
     fetch(`${import.meta.env.VITE_BACKEND_URL}/rand`)
       .then((res) => res.json())
       .then((data) => setRandomData(data))
       .catch((err) => console.error(err));
+
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/rand1`)
+      .then((res) => res.json())
+      .then((data) => setRandom1Data(data[0]))
+      .catch((err) => console.error(err));
   }, []);
 
-
+  console.log(random1Data);
   editMeta("Home", "Welcome to Pokemon's Largest Online Supermarket");
 
   return (
@@ -44,17 +51,16 @@ function Home() {
                 </h5>
               </div>
               <div className="buttonNews d-flex justify-content-center h-25 p-2">
-                <button
+                <Link to={`/products/${random1Data && random1Data.index}`}
                   className="bNews
                 btn btn-success rounded
                 align-self-end"
                   type="button"
                 >
                   Adopt Now
-                </button>
+                </Link>
               </div>
             </div>
-
             <div className="hardChoose w-100 d-flex flex-column my-1">
               <h3 className="newsTitle m-2">Is it hard to choose?</h3>
               <div className="imgNewsHome d-flex">
@@ -68,13 +74,14 @@ function Home() {
                 </h5>
               </div>
               <div className="buttonNews d-flex justify-content-center h-25 p-2">
-                <button
+                <Link to={`/products/${random1Data && random1Data.index}`}
                   className="bNews
-                  btn btn-success rounded align-self-end"
+                btn btn-success rounded
+                align-self-end"
                   type="button"
                 >
                   Adopt Now
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -90,13 +97,14 @@ function Home() {
                   The magic of Christmas with a new friend !
                 </h4>
                 <div className="buttonNews d-flex justify-content-center mb-2">
-                  <button
+                  <Link to={`/products/${random1Data && random1Data.index}`}
                     className="bNews
-                    btn btn-success rounded"
+                btn btn-success rounded
+                align-self-end"
                     type="button"
                   >
                     Adopt Now
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
