@@ -59,6 +59,7 @@ function Form() {
             <textarea
               name="Message"
               placeholder="Message"
+              required
               className="rounded w-75 h-100"
             />
           </div>
@@ -66,7 +67,7 @@ function Form() {
             <button
               type="submit"
               onClick={() => sendEmail}
-              className="btn btn-success formSendButton mb-2 contactButton textRegular"
+              className="btn btn-success text-white formSendButton mb-2 contactButton textRegular"
             >
               Send
             </button>
