@@ -1,7 +1,7 @@
 const express = require("express");
-const pokemons = require("./data/pokemons");
 
 const { connection } = require("./db");
+
 const router = express.Router();
 
 router.get("/hello", (req, res) => {
@@ -21,7 +21,7 @@ router.get("/pokemons", (req, res) => {
 });
 
 router.get("/pokemons/:id", (req, res) => {
-  const id = parseInt(req.params.id);
+  const id = parseInt(req.params.id, 10);
 
   connection
     .query("SELECT * FROM pokemons WHERE pokemons.index = ?", [id])
