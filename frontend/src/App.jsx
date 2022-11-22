@@ -22,9 +22,7 @@ function App() {
   };
   const handlePanierQuantity = (index, quantity) => {
     const newPanier = [...panier];
-    const actualPokemon = newPanier.find(
-      (pokemon) => pokemon.pokedex_index === index
-    );
+    const actualPokemon = newPanier.find((pokemon) => pokemon.index === index);
     actualPokemon.quantity = quantity;
     setPanier(newPanier);
   };
@@ -36,7 +34,7 @@ function App() {
   };
   const handleDeletPanier = (toDelete) => {
     const newPanier = panier.filter(
-      (pokemon) => pokemon.pokedex_index !== toDelete.pokedex_index
+      (pokemon) => pokemon.index !== toDelete.index
     );
     setPanier(newPanier);
   };

@@ -10,6 +10,15 @@ function Basket({ panier, handleDeletPanier, handlePanierQuantity }) {
   const handleChange = (e) => {
     setDeliveryOption(e.target.value);
   };
+  const handlePanierReduce = () => {
+    const value = [];
+    panier.forEach((elem) => value.push(elem.quantity * elem.price));
+    const sumWithInitial = value.reduce(
+      (accumulator, currentValue) => accumulator + currentValue,
+      0
+    );
+    return sumWithInitial;
+  };
   editMeta("Cart", "Find the contents of your cart");
   return (
     <div className="body-basket md">
@@ -32,11 +41,11 @@ function Basket({ panier, handleDeletPanier, handlePanierQuantity }) {
               <h1 className="title-basket text-center">Summary of orders</h1>
               <div className="price-product d-flex mb-3 p-2 w-100 justify-content-between my-3">
                 <h3>Total items</h3>
-                <h4>10$</h4>
+                <h4>{handlePanierReduce()}$</h4>
               </div>
               <div className="price-tva d-flex mb-3 p-2 w-100 justify-content-between">
                 <p>Including TVA</p>
-                <p>0.99$</p>
+                <p>{handlePanierReduce() * 0.2}$</p>
               </div>
               <div className="delivery d-flex mb-3 p-2 w-100 justify-content-between">
                 <h3>Delivery cost</h3>

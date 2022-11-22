@@ -1,7 +1,7 @@
 import React from "react";
 
 function Basketcard({ handleDeletPanier, pokemon, handlePanierQuantity }) {
-  const { url, name, price, quantity, pokedex_index: index } = pokemon;
+  const { url, name, price, quantity, index } = pokemon;
 
   return (
     <div className="product row border-bottom">
