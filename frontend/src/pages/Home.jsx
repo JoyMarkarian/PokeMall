@@ -1,8 +1,11 @@
 import React from "react";
 
+import editMeta from "@services/seo";
+
 import "../Home.css";
 
 function Home() {
+  editMeta("Home", "Welcome to Pokemon's Largest Online Supermarket");
   return (
     <div className="homePage">
       <div className="imageBck">
