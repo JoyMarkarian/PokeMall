@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
-function Basketcard({ handleDeletPanier, pokemon }) {
-  const { url, name, price } = pokemon;
-  const [quantity, setQuantity] = useState(1);
+function Basketcard({ handleDeletPanier, pokemon, handlePanierQuantity }) {
+  const { url, name, price, quantity, pokedex_index: index } = pokemon;
+
   return (
     <div className="product row border-bottom">
       <div className="img-basket col-6 my-5">
@@ -13,9 +13,10 @@ function Basketcard({ handleDeletPanier, pokemon }) {
         <div className="product-basket w-30 d-inline-block justify-content-center md">
           <label htmlFor="floatingSelect">Quantity</label>
           <select
-            onChange={(e) => setQuantity(e.target.value)}
+            onChange={(e) => handlePanierQuantity(index, e.target.value)}
             className="quantity form-select"
             id="quantitySelect"
+            value={quantity}
           >
             <option value="1">1</option>
             <option value="2">2</option>
@@ -36,7 +37,7 @@ function Basketcard({ handleDeletPanier, pokemon }) {
         >
           Delete
         </button>
-        <h3 className="my-3">Price : {price}$</h3>
+        <h3 className="my-3 fs-5">Price : {price}$</h3>
         <h4 className="my-3">Total price : {quantity * price}$</h4>
       </div>
     </div>

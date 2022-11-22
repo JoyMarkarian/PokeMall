@@ -3,10 +3,9 @@ import { useState } from "react";
 import editMeta from "@services/seo";
 
 import Basketcard from "../components/Basketcard";
-
 import "../Basket.css";
 
-function Basket({ panier, handleDeletPanier }) {
+function Basket({ panier, handleDeletPanier, handlePanierQuantity }) {
   const [deliveryOption, setDeliveryOption] = useState("1");
   const handleChange = (e) => {
     setDeliveryOption(e.target.value);
@@ -23,6 +22,7 @@ function Basket({ panier, handleDeletPanier }) {
                 key={pokemon.pokedex_index}
                 handleDeletPanier={handleDeletPanier}
                 pokemon={pokemon}
+                handlePanierQuantity={handlePanierQuantity}
               />
             ))}
           </div>
