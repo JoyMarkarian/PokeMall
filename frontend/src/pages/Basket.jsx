@@ -45,7 +45,7 @@ function Basket({ panier, handleDeletPanier, handlePanierQuantity }) {
               </div>
               <div className="price-tva d-flex mb-3 p-2 w-100 justify-content-between">
                 <p>Including TVA</p>
-                <p>{handlePanierReduce() * 0.2}$</p>
+                <p>{(handlePanierReduce() * 0.2).toFixed(2)}$</p>
               </div>
               <div className="delivery d-flex mb-3 p-2 w-100 justify-content-between">
                 <h3>Delivery cost</h3>
