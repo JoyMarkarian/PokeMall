@@ -167,14 +167,14 @@ function Home() {
                   alt="..."
                 />
                 <div className="btnSliderHome d-flex justify-content-center">
-                  <button
+                  <Link
                     className="bNews
                 btn btn-success rounded
                 "
-                    type="button"
+                    to={`/products/${randomData[0].index}`}
                   >
                     Adopt Now
-                  </button>
+                  </Link>
                 </div>
               </div>
               <div className="carousel-item">
@@ -184,14 +184,14 @@ function Home() {
                   alt="..."
                 />
                 <div className="btnSliderHome d-flex justify-content-center">
-                  <button
+                  <Link
                     className="bNews
                 btn btn-success rounded
                 "
-                    type="button"
+                    to={`/products/${randomData[1].index}`}
                   >
                     Adopt Now
-                  </button>
+                  </Link>
                 </div>
               </div>
               <div className="carousel-item">
@@ -201,14 +201,14 @@ function Home() {
                   alt="..."
                 />
                 <div className="btnSliderHome d-flex justify-content-center">
-                  <button
+                  <Link
                     className="bNews
                 btn btn-success rounded
                 "
-                    type="button"
+                    to={`/products/${randomData[2].index}`}
                   >
                     Adopt Now
-                  </button>
+                  </Link>
                 </div>
               </div>
               <div className="carousel-item">
@@ -218,14 +218,14 @@ function Home() {
                   alt="..."
                 />
                 <div className="btnSliderHome d-flex justify-content-center">
-                  <button
+                  <Link
                     className="bNews
                 btn btn-success rounded
                 "
-                    type="button"
+                    to={`/products/${randomData[3].index}`}
                   >
                     Adopt Now
-                  </button>
+                  </Link>
                 </div>
               </div>
               <div className="carousel-item">
@@ -235,14 +235,14 @@ function Home() {
                   alt="..."
                 />
                 <div className="btnSliderHome d-flex justify-content-center">
-                  <button
+                  <Link
                     className="bNews
                 btn btn-success rounded
                 "
-                    type="button"
+                    to={`/products/${randomData[4].index}`}
                   >
                     Adopt Now
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
