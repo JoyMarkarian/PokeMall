@@ -39,7 +39,7 @@ export default function Footer() {
           </a>
           <a href="https://www.facebook.com/">
             <img src={PictoF} className="picto-rs m-2" alt="picto" />
-          </a>{" "}
+          </a>
         </div>
         <div className="text-center">
           <p className="text-reset">
