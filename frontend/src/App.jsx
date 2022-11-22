@@ -20,10 +20,18 @@ function App() {
   const handleSearch = (value) => {
     setSearch(value);
   };
+  const handlePanierQuantity = (index, quantity) => {
+    const newPanier = [...panier];
+    const actualPokemon = newPanier.find(
+      (pokemon) => pokemon.pokedex_index === index
+    );
+    actualPokemon.quantity = quantity;
+    setPanier(newPanier);
+  };
 
   const handlePanier = (addCard) => {
-    const newPanier = panier;
-    newPanier.push(addCard);
+    const newPanier = [...panier];
+    newPanier.push({ ...addCard, quantity: 1 });
     setPanier(newPanier);
   };
   const handleDeletPanier = (toDelete) => {
@@ -41,7 +49,11 @@ function App() {
         <Route
           path="/cart"
           element={
-            <Basket panier={panier} handleDeletPanier={handleDeletPanier} />
+            <Basket
+              panier={panier}
+              handleDeletPanier={handleDeletPanier}
+              handlePanierQuantity={handlePanierQuantity}
+            />
           }
         />
         <Route
