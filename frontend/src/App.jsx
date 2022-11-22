@@ -22,21 +22,26 @@ function App() {
   };
   const handlePanierQuantity = (index, quantity) => {
     const newPanier = [...panier];
-    const actualPokemon = newPanier.find(
-      (pokemon) => pokemon.pokedex_index === index
-    );
+    const actualPokemon = newPanier.find((pokemon) => pokemon.index === index);
     actualPokemon.quantity = quantity;
     setPanier(newPanier);
   };
 
   const handlePanier = (addCard) => {
     const newPanier = [...panier];
-    newPanier.push({ ...addCard, quantity: 1 });
+    if (newPanier.some((elem) => elem.index === addCard.index)) {
+      const actualPokemon = newPanier.find(
+        (pokemon) => pokemon.index === addCard.index
+      );
+      actualPokemon.quantity += 1;
+    } else {
+      newPanier.push({ ...addCard, quantity: 1 });
+    }
     setPanier(newPanier);
   };
   const handleDeletPanier = (toDelete) => {
     const newPanier = panier.filter(
-      (pokemon) => pokemon.pokedex_index !== toDelete.pokedex_index
+      (pokemon) => pokemon.index !== toDelete.index
     );
     setPanier(newPanier);
   };

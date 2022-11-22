@@ -50,4 +50,16 @@ router.get("/rand", (req, res) => {
     });
 });
 
+router.get("/rand1", (req, res) => {
+  connection
+    .query("SELECT pokemons.index FROM pokemons ORDER BY RAND() LIMIT 1")
+    .then(([response]) => {
+      res.status(200).send(response);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+});
+
 module.exports = router;
