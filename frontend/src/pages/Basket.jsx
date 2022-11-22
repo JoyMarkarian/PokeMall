@@ -2,8 +2,11 @@ import { useState } from "react";
 
 import editMeta from "@services/seo";
 
+import { ToastContainer, toast } from "react-toastify";
 import Basketcard from "../components/Basketcard";
+
 import "../Basket.css";
+import "react-toastify/dist/ReactToastify.css";
 
 function Basket({ panier, handleDeletPanier, handlePanierQuantity }) {
   const [deliveryOption, setDeliveryOption] = useState("1");
@@ -18,6 +21,19 @@ function Basket({ panier, handleDeletPanier, handlePanierQuantity }) {
       0
     );
     return sumWithInitial;
+  };
+
+  const notify = () => {
+    toast.success("Thank you for your order !", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
   };
   editMeta("Cart", "Find the contents of your cart");
   return (
@@ -53,6 +69,7 @@ function Basket({ panier, handleDeletPanier, handlePanierQuantity }) {
               </div>
               <div className="d-flex justify-content-center">
                 <button
+                  onClick={notify}
                   type="button"
                   className="valide-basket btn btn-success btn-lg mb-2"
                 >
@@ -127,6 +144,18 @@ function Basket({ panier, handleDeletPanier, handlePanierQuantity }) {
           </div>
         </div>
       </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </div>
   );
 }
