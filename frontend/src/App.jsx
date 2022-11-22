@@ -31,7 +31,14 @@ function App() {
 
   const handlePanier = (addCard) => {
     const newPanier = [...panier];
-    newPanier.push({ ...addCard, quantity: 1 });
+    if (newPanier.some((elem) => elem.index === addCard.index)) {
+      const actualPokemon = newPanier.find(
+        (pokemon) => pokemon.index === addCard.index
+      );
+      actualPokemon.quantity += 1;
+    } else {
+      newPanier.push({ ...addCard, quantity: 1 });
+    }
     setPanier(newPanier);
   };
   const handleDeletPanier = (toDelete) => {
