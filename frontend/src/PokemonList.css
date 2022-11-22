@@ -30,16 +30,20 @@
   border-color: #2a4f3f;
 }
 
-.sort-by {
-  margin-left: 1%;
-  margin-bottom: 10px;
-}
-
-.select-sort {
-  width: 45%;
+.select-sort, .filter-sort {
   border-color: #2a4f3f;
   border-width: 1px;
   background-color: #edf1ef;
+}
+
+.filter-sort {
+  border-radius: 25px;
+  width: 150px;
+}
+
+.sort-by, .filter-by {
+  margin-left: 5px;
+  margin-bottom: 5px;
 }
 
 @media screen and (min-width: 769px) {
@@ -47,15 +51,15 @@
     width: 20%;
   }
 
-  .select-sort {
-    width: 15%;
-  }
-
   .card-pokemon {
     margin: 1%;
   }
 
   .sort-by {
-    margin-left: 6%;
+    margin-left: 90px;
+  }
+  
+  .filter-by {
+    margin-left: 20px;
   }
 }

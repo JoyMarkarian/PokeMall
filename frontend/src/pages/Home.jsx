@@ -5,7 +5,6 @@ import editMeta from "@services/seo";
 import "../Home.css";
 
 function Home() {
-
   const [randomData, setRandomData] = useState([]);
 
   useEffect(() => {
@@ -14,7 +13,6 @@ function Home() {
       .then((data) => setRandomData(data))
       .catch((err) => console.error(err));
   }, []);
-
 
   editMeta("Home", "Welcome to Pokemon's Largest Online Supermarket");
 
