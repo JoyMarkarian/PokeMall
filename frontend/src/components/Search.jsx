@@ -1,8 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import searchIcon from "../assets/search.svg";
 
-function Search({ search, handleSearch, setPage }) {
+function Search({ search, handleSearch }) {
+  const navigate = useNavigate();
   return (
     <div className="search-bar form-control me-2 d-flex">
       <input
@@ -12,9 +14,7 @@ function Search({ search, handleSearch, setPage }) {
         aria-label="Search"
         value={search}
         onChange={(event) => handleSearch(event.target.value)}
-        onKeyDown={(event) =>
-          event.key === "Enter" && setPage({ path: "Products", index: null })
-        }
+        onKeyDown={(event) => event.key === "Enter" && navigate("/products")}
       />
 
       <img className="search-icon" src={searchIcon} alt="searchIcon" />
