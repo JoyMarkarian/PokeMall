@@ -38,7 +38,7 @@
 
 .filter-sort {
   border-radius: 25px;
-  width: 150px;
+  width: 110px;
 }
 
 .sort-by, .filter-by {
@@ -61,5 +61,9 @@
   
   .filter-by {
     margin-left: 20px;
+  }
+
+  .filter-sort {
+    width: 150px;
   }
 }
