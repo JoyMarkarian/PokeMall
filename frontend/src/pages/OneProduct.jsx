@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 
+import editMeta from "@services/seo";
+
 import PokemonStat from "@components/PokemonStat";
 import Avis from "@components/Avis";
 
@@ -53,6 +55,12 @@ function OneProduct({ handlePanier }) {
       `${word}`.charAt(0).toUpperCase() + `${word}`.slice(1).toLowerCase();
     return result;
   }
+
+  editMeta(
+    pokemon && letter(name),
+    "Find all the characteristics of your pokemon"
+  );
+
   return (
     <div className="container-fluid divPrincipale">
       <div className="d-flex justify-content-around">

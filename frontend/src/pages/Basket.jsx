@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import editMeta from "@services/seo";
+
 import Basketcard from "../components/Basketcard";
 
 import "../Basket.css";
@@ -9,6 +11,7 @@ function Basket({ panier, handleDeletPanier }) {
   const handleChange = (e) => {
     setDeliveryOption(e.target.value);
   };
+  editMeta("Cart", "Find the contents of your cart");
   return (
     <div className="body-basket md">
       <div className="container md">
