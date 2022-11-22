@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import "../Home.css";
 
 function Home() {
+  const [randomData, setRandomData] = useState([]);
+
+  useEffect(() => {
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/rand`)
+      .then((res) => res.json())
+      .then((data) => setRandomData(data))
+      .catch((err) => console.error(err));
+  }, []);
+
   return (
     <div className="homePage">
       <div className="imageBck">
@@ -135,93 +144,95 @@ function Home() {
               aria-label="Slide 5"
             />
           </div>
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg"
-                className="d-block w-75"
-                alt="..."
-              />
-              <div className="btnSliderHome d-flex justify-content-center">
-                <button
-                  className="bNews
+          {randomData.length > 0 && (
+            <div className="carousel-inner">
+              <div className="carousel-item active">
+                <img
+                  src={randomData[0].url}
+                  className="d-block w-75"
+                  alt="..."
+                />
+                <div className="btnSliderHome d-flex justify-content-center">
+                  <button
+                    className="bNews
                 btn btn-success rounded
                 "
-                  type="button"
-                >
-                  Adopt Now
-                </button>
+                    type="button"
+                  >
+                    Adopt Now
+                  </button>
+                </div>
               </div>
-            </div>
-            <div className="carousel-item">
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
-                className="d-block w-75"
-                alt="..."
-              />
-              <div className="btnSliderHome d-flex justify-content-center">
-                <button
-                  className="bNews
+              <div className="carousel-item">
+                <img
+                  src={randomData[1].url}
+                  className="d-block w-75"
+                  alt="..."
+                />
+                <div className="btnSliderHome d-flex justify-content-center">
+                  <button
+                    className="bNews
                 btn btn-success rounded
                 "
-                  type="button"
-                >
-                  Adopt Now
-                </button>
+                    type="button"
+                  >
+                    Adopt Now
+                  </button>
+                </div>
               </div>
-            </div>
-            <div className="carousel-item">
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg"
-                className="d-block w-75"
-                alt="..."
-              />
-              <div className="btnSliderHome d-flex justify-content-center">
-                <button
-                  className="bNews
+              <div className="carousel-item">
+                <img
+                  src={randomData[2].url}
+                  className="d-block w-75"
+                  alt="..."
+                />
+                <div className="btnSliderHome d-flex justify-content-center">
+                  <button
+                    className="bNews
                 btn btn-success rounded
                 "
-                  type="button"
-                >
-                  Adopt Now
-                </button>
+                    type="button"
+                  >
+                    Adopt Now
+                  </button>
+                </div>
               </div>
-            </div>
-            <div className="carousel-item">
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/30.svg"
-                className="d-block w-75"
-                alt="..."
-              />
-              <div className="btnSliderHome d-flex justify-content-center">
-                <button
-                  className="bNews
+              <div className="carousel-item">
+                <img
+                  src={randomData[3].url}
+                  className="d-block w-75"
+                  alt="..."
+                />
+                <div className="btnSliderHome d-flex justify-content-center">
+                  <button
+                    className="bNews
                 btn btn-success rounded
                 "
-                  type="button"
-                >
-                  Adopt Now
-                </button>
+                    type="button"
+                  >
+                    Adopt Now
+                  </button>
+                </div>
               </div>
-            </div>
-            <div className="carousel-item">
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
-                className="d-block w-75"
-                alt="..."
-              />
-              <div className="btnSliderHome d-flex justify-content-center">
-                <button
-                  className="bNews
+              <div className="carousel-item">
+                <img
+                  src={randomData[4].url}
+                  className="d-block w-75"
+                  alt="..."
+                />
+                <div className="btnSliderHome d-flex justify-content-center">
+                  <button
+                    className="bNews
                 btn btn-success rounded
                 "
-                  type="button"
-                >
-                  Adopt Now
-                </button>
+                    type="button"
+                  >
+                    Adopt Now
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
+          )}
           <button
             className="carousel-control-prev"
             type="button"

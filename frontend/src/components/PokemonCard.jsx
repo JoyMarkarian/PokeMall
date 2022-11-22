@@ -8,17 +8,15 @@ function PokemonCard({ pokemon }) {
       <div className="card-body">
         <img
           className="img-fluid, card-img-top"
-          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemon.pokedex_index}.svg`}
+          src={pokemon.url}
           alt={pokemon.name}
         />
       </div>
       <h2 className="card-title text-capitalize text-center">{pokemon.name}</h2>
-      <p className="card-index text-center">
-        Pokedex index : {pokemon.pokedex_index}
-      </p>
+      <p className="card-index text-center">Pokedex index : {pokemon.index}</p>
       <h3 className="card-price text-center">Price : {pokemon.price}$</h3>
       <HashLink
-        to={`/products/${pokemon.pokedex_index}#`}
+        to={`/products/${pokemon.index}#`}
         className="btn btn-card btn-success"
       >
         Show product
