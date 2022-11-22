@@ -20,7 +20,9 @@ export default function Header({ setPage, search, handleSearch }) {
     <header>
       <div className="d-flex align-items-center justify-content-around ">
         <div className="p-2 d-none d-md-block">
-          <img src={Logo} className="img-fluid w-50 h-50" alt="logo" />
+          <Link to="/">
+            <img src={Logo} className="img-fluid w-50 h-50" alt="logo" />
+          </Link>
         </div>
         <div className="p-2 d-md-none">
           <button
@@ -37,11 +39,13 @@ export default function Header({ setPage, search, handleSearch }) {
           </div>
         </div>
         <div className="p-2 text-center">
-          <img
-            src={Logo}
-            className="logo img-fluid w-75 h-75 m-1 d-md-none"
-            alt="logo"
-          />
+          <Link to="/">
+            <img
+              src={Logo}
+              className="logo img-fluid w-75 h-75 m-1 d-md-none"
+              alt="logo"
+            />
+          </Link>
           <Search
             search={search}
             handleSearch={handleSearch}

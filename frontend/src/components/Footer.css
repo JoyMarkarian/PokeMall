@@ -6,12 +6,20 @@
   background-color: #edf1ef;
 }
 
-.footer-lien {
+.footer-lien, .text-reset {
   background-color: #edf1ef;
   font-family: "Noto Sans";
+  color: #2a4f3f !important;
 }
 
 .title-footer {
   font-family: "Oswald";
   color: #2a4f3f;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 769px) {
+  .title-footer {
+    font-size: 18px;
+  }
 }
