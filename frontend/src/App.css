@@ -17,6 +17,10 @@
   color: white;
 }
 
+.customImageWidth {
+  width: 58%;
+}
+
 .textRegular {
   font-family: "Noto Sans", sans-serif;
   color: #2a4f3f;
