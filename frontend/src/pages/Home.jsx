@@ -67,7 +67,7 @@ function Home() {
             <img
               src="https://w0.peakpx.com/wallpaper/380/483/HD-wallpaper-pokeball-pokemon-anime-glow-snow.jpg"
               alt=""
-              className="w-50"
+              className="customImageWidth d-none d-md-block d-lg-block d-xl-block"
             />
             <div className="christHome w-100">
               <div className="christHomeShop h-100 d-flex flex-column">
