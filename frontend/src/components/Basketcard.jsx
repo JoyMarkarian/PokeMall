@@ -1,7 +1,7 @@
 import React from "react";
 
 function Basketcard({ handleDeletPanier, pokemon, handlePanierQuantity }) {
-  const { url, name, price, quantity, pokedex_index: index } = pokemon;
+  const { url, name, price, quantity, index } = pokemon;
 
   return (
     <div className="product row border-bottom">
@@ -9,7 +9,7 @@ function Basketcard({ handleDeletPanier, pokemon, handlePanierQuantity }) {
         <img src={url} className="img float-start img-fluid" alt="pokemon" />
       </div>
       <div className="basket-top col-6">
-        <h2 className="my-5">{name}</h2>
+        <h2 className="my-5 text-capitalize">{name}</h2>
         <div className="product-basket w-30 d-inline-block justify-content-center md">
           <label htmlFor="floatingSelect">Quantity</label>
           <select
