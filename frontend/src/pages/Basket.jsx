@@ -8,7 +8,12 @@ import Basketcard from "../components/Basketcard";
 import "../Basket.css";
 import "react-toastify/dist/ReactToastify.css";
 
-function Basket({ panier, handleDeletPanier, handlePanierQuantity }) {
+function Basket({
+  panier,
+  setPanier,
+  handleDeletPanier,
+  handlePanierQuantity,
+}) {
   const [deliveryOption, setDeliveryOption] = useState("1");
   const handleChange = (e) => {
     setDeliveryOption(e.target.value);
@@ -34,6 +39,7 @@ function Basket({ panier, handleDeletPanier, handlePanierQuantity }) {
       progress: undefined,
       theme: "light",
     });
+    setPanier([]);
   };
   editMeta("Cart", "Find the contents of your cart");
   return (
@@ -42,14 +48,18 @@ function Basket({ panier, handleDeletPanier, handlePanierQuantity }) {
         <h1 className="title-basket title-cart text-center">CART</h1>
         <div className="basket-dekstop row">
           <div className="col-md-8 md-w-75">
-            {panier.map((pokemon) => (
-              <Basketcard
-                key={pokemon.pokedex_index}
-                handleDeletPanier={handleDeletPanier}
-                pokemon={pokemon}
-                handlePanierQuantity={handlePanierQuantity}
-              />
-            ))}
+            {panier.length === 0 ? (
+              <p className="text-center">Your cart is empty.</p>
+            ) : (
+              panier.map((pokemon) => (
+                <Basketcard
+                  key={pokemon.pokedex_index}
+                  handleDeletPanier={handleDeletPanier}
+                  pokemon={pokemon}
+                  handlePanierQuantity={handlePanierQuantity}
+                />
+              ))
+            )}
           </div>
           <div className="card-summary col-md-4 card md-w-50">
             <div className="summary-order container">
@@ -135,6 +145,7 @@ function Basket({ panier, handleDeletPanier, handlePanierQuantity }) {
             </div>
             <div className="valide-basket-mobile card m-3">
               <button
+                onClick={notify}
                 type="button"
                 className="btn-valide-mobile btn btn-success btn-lg"
               >
