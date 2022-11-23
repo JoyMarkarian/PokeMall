@@ -51,7 +51,7 @@ function Home() {
               <div className="buttonNews d-flex justify-content-center h-25 p-2">
                 <HashLink
                   to={`/products/${random1Data && random1Data.index}#`}
-                  className="bNews
+                  className="bNews h-100
                 btn btn-success rounded
                 align-self-end"
                   type="button"
@@ -60,7 +60,7 @@ function Home() {
                 </HashLink>
               </div>
             </div>
-            <div className="hardChoose w-100 d-flex flex-column my-1">
+            <div className="hardChoose d-flex flex-column my-1">
               <h3 className="newsTitle m-2">Is it hard to choose?</h3>
               <div className="imgNewsHome d-flex">
                 <img
@@ -75,7 +75,7 @@ function Home() {
               <div className="buttonNews d-flex justify-content-center h-25 p-2">
                 <HashLink
                   to={`/products/${random1Data && random1Data.index}#`}
-                  className="bNews
+                  className="bNews h-75
                 btn btn-success rounded
                 align-self-end"
                   type="button"
@@ -99,7 +99,7 @@ function Home() {
                 <div className="buttonNews d-flex justify-content-center mb-2">
                   <HashLink
                     to={`/products/${random1Data && random1Data.index}#`}
-                    className="bNews
+                    className="bNews h-100
                 btn btn-success rounded
                 align-self-end"
                     type="button"
