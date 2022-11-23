@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 import editMeta from "@services/seo";
 
@@ -7,7 +7,7 @@ import "../Home.css";
 
 function Home() {
   const [randomData, setRandomData] = useState([]);
-  const [random1Data, setRandom1Data] = useState([])
+  const [random1Data, setRandom1Data] = useState([]);
 
   useEffect(() => {
     fetch(`${import.meta.env.VITE_BACKEND_URL}/rand`)
@@ -49,14 +49,15 @@ function Home() {
                 </h5>
               </div>
               <div className="buttonNews d-flex justify-content-center h-25 p-2">
-                <Link to={`/products/${random1Data && random1Data.index}`}
+                <HashLink
+                  to={`/products/${random1Data && random1Data.index}#`}
                   className="bNews
                 btn btn-success rounded
                 align-self-end"
                   type="button"
                 >
                   Adopt Now
-                </Link>
+                </HashLink>
               </div>
             </div>
             <div className="hardChoose w-100 d-flex flex-column my-1">
@@ -72,14 +73,15 @@ function Home() {
                 </h5>
               </div>
               <div className="buttonNews d-flex justify-content-center h-25 p-2">
-                <Link to={`/products/${random1Data && random1Data.index}`}
+                <HashLink
+                  to={`/products/${random1Data && random1Data.index}#`}
                   className="bNews
                 btn btn-success rounded
                 align-self-end"
                   type="button"
                 >
                   Adopt Now
-                </Link>
+                </HashLink>
               </div>
             </div>
           </div>
@@ -95,14 +97,15 @@ function Home() {
                   The magic of Christmas with a new friend !
                 </h4>
                 <div className="buttonNews d-flex justify-content-center mb-2">
-                  <Link to={`/products/${random1Data && random1Data.index}`}
+                  <HashLink
+                    to={`/products/${random1Data && random1Data.index}#`}
                     className="bNews
                 btn btn-success rounded
                 align-self-end"
                     type="button"
                   >
                     Adopt Now
-                  </Link>
+                  </HashLink>
                 </div>
               </div>
             </div>
@@ -165,14 +168,14 @@ function Home() {
                   alt="..."
                 />
                 <div className="btnSliderHome d-flex justify-content-center">
-                  <Link
+                  <HashLink
                     className="bNews
                 btn btn-success rounded
                 "
-                    to={`/products/${randomData[0].index}`}
+                    to={`/products/${randomData[0].index}#`}
                   >
                     Adopt Now
-                  </Link>
+                  </HashLink>
                 </div>
               </div>
               <div className="carousel-item">
@@ -182,14 +185,14 @@ function Home() {
                   alt="..."
                 />
                 <div className="btnSliderHome d-flex justify-content-center">
-                  <Link
+                  <HashLink
                     className="bNews
                 btn btn-success rounded
                 "
-                    to={`/products/${randomData[1].index}`}
+                    to={`/products/${randomData[1].index}#`}
                   >
                     Adopt Now
-                  </Link>
+                  </HashLink>
                 </div>
               </div>
               <div className="carousel-item">
@@ -199,14 +202,14 @@ function Home() {
                   alt="..."
                 />
                 <div className="btnSliderHome d-flex justify-content-center">
-                  <Link
+                  <HashLink
                     className="bNews
                 btn btn-success rounded
                 "
-                    to={`/products/${randomData[2].index}`}
+                    to={`/products/${randomData[2].index}#`}
                   >
                     Adopt Now
-                  </Link>
+                  </HashLink>
                 </div>
               </div>
               <div className="carousel-item">
@@ -216,14 +219,14 @@ function Home() {
                   alt="..."
                 />
                 <div className="btnSliderHome d-flex justify-content-center">
-                  <Link
+                  <HashLink
                     className="bNews
                 btn btn-success rounded
                 "
-                    to={`/products/${randomData[3].index}`}
+                    to={`/products/${randomData[3].index}#`}
                   >
                     Adopt Now
-                  </Link>
+                  </HashLink>
                 </div>
               </div>
               <div className="carousel-item">
@@ -233,14 +236,14 @@ function Home() {
                   alt="..."
                 />
                 <div className="btnSliderHome d-flex justify-content-center">
-                  <Link
+                  <HashLink
                     className="bNews
                 btn btn-success rounded
                 "
-                    to={`/products/${randomData[4].index}`}
+                    to={`/products/${randomData[4].index}#`}
                   >
                     Adopt Now
-                  </Link>
+                  </HashLink>
                 </div>
               </div>
             </div>
