@@ -170,7 +170,7 @@ function Home() {
                 <div className="btnSliderHome d-flex justify-content-center">
                   <HashLink
                     className="bNews
-                btn btn-success rounded
+                btn btn-success rounded h-100
                 "
                     to={`/products/${randomData[0].index}#`}
                   >
@@ -187,7 +187,7 @@ function Home() {
                 <div className="btnSliderHome d-flex justify-content-center">
                   <HashLink
                     className="bNews
-                btn btn-success rounded
+                btn btn-success rounded h-100
                 "
                     to={`/products/${randomData[1].index}#`}
                   >
@@ -204,7 +204,7 @@ function Home() {
                 <div className="btnSliderHome d-flex justify-content-center">
                   <HashLink
                     className="bNews
-                btn btn-success rounded
+                btn btn-success rounded h-100
                 "
                     to={`/products/${randomData[2].index}#`}
                   >
@@ -221,7 +221,7 @@ function Home() {
                 <div className="btnSliderHome d-flex justify-content-center">
                   <HashLink
                     className="bNews
-                btn btn-success rounded
+                btn btn-success rounded h-100
                 "
                     to={`/products/${randomData[3].index}#`}
                   >
@@ -238,7 +238,7 @@ function Home() {
                 <div className="btnSliderHome d-flex justify-content-center">
                   <HashLink
                     className="bNews
-                btn btn-success rounded
+                btn btn-success rounded h-100
                 "
                     to={`/products/${randomData[4].index}#`}
                   >
