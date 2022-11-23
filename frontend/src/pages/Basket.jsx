@@ -10,7 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 function Basket({
   panier,
-  setPanier,
+  handleChangePanier,
   handleDeletPanier,
   handlePanierQuantity,
 }) {
@@ -39,7 +39,7 @@ function Basket({
       progress: undefined,
       theme: "light",
     });
-    setPanier([]);
+    handleChangePanier([]);
   };
   editMeta("Cart", "Find the contents of your cart");
   return (
@@ -49,7 +49,7 @@ function Basket({
         <div className="basket-dekstop row">
           <div className="col-md-8 md-w-75">
             {panier.length === 0 ? (
-              <p className="text-center">Your cart is empty.</p>
+              <p className="text-center fs-4">Your cart is empty</p>
             ) : (
               panier.map((pokemon) => (
                 <Basketcard
@@ -83,7 +83,7 @@ function Basket({
                   type="button"
                   className="valide-basket btn btn-success btn-lg mb-2"
                 >
-                  Validate my order
+                  Confirm my order
                 </button>
               </div>
             </div>
@@ -149,7 +149,7 @@ function Basket({
                 type="button"
                 className="btn-valide-mobile btn btn-success btn-lg"
               >
-                Validate my order
+                Confirm my order
               </button>
             </div>
           </div>
