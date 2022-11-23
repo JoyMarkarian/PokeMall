@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 import Form from "./Form";
 
@@ -23,10 +23,10 @@ export default function Footer() {
           <div className="menu-lien text-justify">
             <h1 className="title-footer mb-3">MENU</h1>
             <p className="mb-2">
-              <Link to="/">Home</Link>
+              <HashLink to="/#">Home</HashLink>
             </p>
             <p className="mb-2">
-              <Link to="/products">All Products</Link>
+              <HashLink to="/products#">All Products</HashLink>
             </p>
           </div>
         </div>
