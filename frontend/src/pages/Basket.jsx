@@ -39,7 +39,7 @@ function Basket({
       progress: undefined,
       theme: "light",
     });
-    handleChangePanier([]);
+    handleChangePanier();
   };
   editMeta("Cart", "Find the contents of your cart");
   return (
