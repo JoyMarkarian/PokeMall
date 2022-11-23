@@ -45,6 +45,9 @@ function App() {
     );
     setPanier(newPanier);
   };
+  const handleChangePanier = () => {
+    setPanier([]);
+  };
   return (
     <Router>
       <Header search={search} handleSearch={handleSearch} />
@@ -58,6 +61,7 @@ function App() {
               panier={panier}
               handleDeletPanier={handleDeletPanier}
               handlePanierQuantity={handlePanierQuantity}
+              handleChangePanier={handleChangePanier}
             />
           }
         />
