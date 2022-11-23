@@ -26,8 +26,8 @@ function Form() {
 
     emailjs
       .sendForm(
-        "service_05bptfr",
-        "template_b1b8eld",
+        `${import.meta.env.VITE_EMAILJS_SERVICE}`,
+        `${import.meta.env.VITE_EMAILJS_TEMPLATE}`,
         form.current,
         `${import.meta.env.VITE_EMAILJS_PUBLIC_KEY}`
       )
