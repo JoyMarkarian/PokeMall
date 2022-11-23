@@ -65,7 +65,7 @@ function PokemonList({ search }) {
               id="floatingFilter"
               onChange={(e) => setFilter(e.target.value)}
             >
-              <option value="type">Type</option>
+              <option value="">Type</option>
               <option value="bug">Bug</option>
               <option value="electric">Electric</option>
               <option value="fairy">Fairy</option>
