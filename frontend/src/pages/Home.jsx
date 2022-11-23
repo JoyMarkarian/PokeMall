@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { HashLink } from "react-router-hash-link";
+
+import editMeta from "@services/seo";
 
 import "../Home.css";
 
 function Home() {
+  const [randomData, setRandomData] = useState([]);
+  const [random1Data, setRandom1Data] = useState([]);
+
+  useEffect(() => {
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/rand`)
+      .then((res) => res.json())
+      .then((data) => setRandomData(data))
+      .catch((err) => console.error(err));
+
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/rand1`)
+      .then((res) => res.json())
+      .then((data) => setRandom1Data(data[0]))
+      .catch((err) => console.error(err));
+  }, []);
+
+  editMeta("Home", "Welcome to Pokemon's Largest Online Supermarket");
+
   return (
     <div className="homePage">
       <div className="imageBck">
@@ -29,18 +49,18 @@ function Home() {
                 </h5>
               </div>
               <div className="buttonNews d-flex justify-content-center h-25 p-2">
-                <button
-                  className="bNews
+                <HashLink
+                  to={`/products/${random1Data && random1Data.index}#`}
+                  className="bNews h-100
                 btn btn-success rounded
                 align-self-end"
                   type="button"
                 >
                   Adopt Now
-                </button>
+                </HashLink>
               </div>
             </div>
-
-            <div className="hardChoose w-100 d-flex flex-column my-1">
+            <div className="hardChoose d-flex flex-column my-1">
               <h3 className="newsTitle m-2">Is it hard to choose?</h3>
               <div className="imgNewsHome d-flex">
                 <img
@@ -53,13 +73,15 @@ function Home() {
                 </h5>
               </div>
               <div className="buttonNews d-flex justify-content-center h-25 p-2">
-                <button
-                  className="bNews
-                  btn btn-success rounded align-self-end"
+                <HashLink
+                  to={`/products/${random1Data && random1Data.index}#`}
+                  className="bNews h-75
+                btn btn-success rounded
+                align-self-end"
                   type="button"
                 >
                   Adopt Now
-                </button>
+                </HashLink>
               </div>
             </div>
           </div>
@@ -67,7 +89,7 @@ function Home() {
             <img
               src="https://w0.peakpx.com/wallpaper/380/483/HD-wallpaper-pokeball-pokemon-anime-glow-snow.jpg"
               alt=""
-              className="w-50"
+              className="customImageWidth d-none d-md-block d-lg-block d-xl-block"
             />
             <div className="christHome w-100">
               <div className="christHomeShop h-100 d-flex flex-column">
@@ -75,13 +97,15 @@ function Home() {
                   The magic of Christmas with a new friend !
                 </h4>
                 <div className="buttonNews d-flex justify-content-center mb-2">
-                  <button
-                    className="bNews
-                    btn btn-success rounded"
+                  <HashLink
+                    to={`/products/${random1Data && random1Data.index}#`}
+                    className="bNews h-100
+                btn btn-success rounded
+                align-self-end"
                     type="button"
                   >
                     Adopt Now
-                  </button>
+                  </HashLink>
                 </div>
               </div>
             </div>
@@ -135,93 +159,95 @@ function Home() {
               aria-label="Slide 5"
             />
           </div>
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg"
-                className="d-block w-75"
-                alt="..."
-              />
-              <div className="btnSliderHome d-flex justify-content-center">
-                <button
-                  className="bNews
-                btn btn-success rounded
+          {randomData.length > 0 && (
+            <div className="carousel-inner">
+              <div className="carousel-item active">
+                <img
+                  src={randomData[0].url}
+                  className="d-block w-75"
+                  alt="..."
+                />
+                <div className="btnSliderHome d-flex justify-content-center">
+                  <HashLink
+                    className="bNews
+                btn btn-success rounded h-100
                 "
-                  type="button"
-                >
-                  Adopt Now
-                </button>
+                    to={`/products/${randomData[0].index}#`}
+                  >
+                    Adopt Now
+                  </HashLink>
+                </div>
+              </div>
+              <div className="carousel-item">
+                <img
+                  src={randomData[1].url}
+                  className="d-block w-75"
+                  alt="..."
+                />
+                <div className="btnSliderHome d-flex justify-content-center">
+                  <HashLink
+                    className="bNews
+                btn btn-success rounded h-100
+                "
+                    to={`/products/${randomData[1].index}#`}
+                  >
+                    Adopt Now
+                  </HashLink>
+                </div>
+              </div>
+              <div className="carousel-item">
+                <img
+                  src={randomData[2].url}
+                  className="d-block w-75"
+                  alt="..."
+                />
+                <div className="btnSliderHome d-flex justify-content-center">
+                  <HashLink
+                    className="bNews
+                btn btn-success rounded h-100
+                "
+                    to={`/products/${randomData[2].index}#`}
+                  >
+                    Adopt Now
+                  </HashLink>
+                </div>
+              </div>
+              <div className="carousel-item">
+                <img
+                  src={randomData[3].url}
+                  className="d-block w-75"
+                  alt="..."
+                />
+                <div className="btnSliderHome d-flex justify-content-center">
+                  <HashLink
+                    className="bNews
+                btn btn-success rounded h-100
+                "
+                    to={`/products/${randomData[3].index}#`}
+                  >
+                    Adopt Now
+                  </HashLink>
+                </div>
+              </div>
+              <div className="carousel-item">
+                <img
+                  src={randomData[4].url}
+                  className="d-block w-75"
+                  alt="..."
+                />
+                <div className="btnSliderHome d-flex justify-content-center">
+                  <HashLink
+                    className="bNews
+                btn btn-success rounded h-100
+                "
+                    to={`/products/${randomData[4].index}#`}
+                  >
+                    Adopt Now
+                  </HashLink>
+                </div>
               </div>
             </div>
-            <div className="carousel-item">
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/2.svg"
-                className="d-block w-75"
-                alt="..."
-              />
-              <div className="btnSliderHome d-flex justify-content-center">
-                <button
-                  className="bNews
-                btn btn-success rounded
-                "
-                  type="button"
-                >
-                  Adopt Now
-                </button>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/3.svg"
-                className="d-block w-75"
-                alt="..."
-              />
-              <div className="btnSliderHome d-flex justify-content-center">
-                <button
-                  className="bNews
-                btn btn-success rounded
-                "
-                  type="button"
-                >
-                  Adopt Now
-                </button>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/30.svg"
-                className="d-block w-75"
-                alt="..."
-              />
-              <div className="btnSliderHome d-flex justify-content-center">
-                <button
-                  className="bNews
-                btn btn-success rounded
-                "
-                  type="button"
-                >
-                  Adopt Now
-                </button>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
-                className="d-block w-75"
-                alt="..."
-              />
-              <div className="btnSliderHome d-flex justify-content-center">
-                <button
-                  className="bNews
-                btn btn-success rounded
-                "
-                  type="button"
-                >
-                  Adopt Now
-                </button>
-              </div>
-            </div>
-          </div>
+          )}
           <button
             className="carousel-control-prev"
             type="button"

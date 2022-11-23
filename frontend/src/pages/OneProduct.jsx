@@ -1,8 +1,13 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 
+import editMeta from "@services/seo";
+
 import PokemonStat from "@components/PokemonStat";
 import Avis from "@components/Avis";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import img from "../assets/previous.png";
 import img2 from "../assets/next.png";
@@ -16,31 +21,59 @@ function OneProduct({ handlePanier }) {
       .then((data) => setPokemon(data))
       .catch((err) => console.error(err));
   }, [id]);
+
+  const notify = () => {
+    toast.success("Your pokemon is sent to your shopping cart", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
+
+  const addAndNotify = () => {
+    handlePanier(pokemon);
+    notify();
+  };
+
   const {
     url,
     name,
-    pokedex_index: index,
+    index,
     price,
-    type,
-    ability,
-    stats,
     hp,
+    attack,
+    defense,
+    specialAttack,
+    specialDefence,
+    speed,
+    primaryType,
+    secondaryType,
+    firstAbility,
+    secondeAbility,
   } = pokemon;
   function letter(word) {
     const result =
       `${word}`.charAt(0).toUpperCase() + `${word}`.slice(1).toLowerCase();
     return result;
   }
+
+  editMeta(
+    pokemon && letter(name),
+    "Find all the characteristics of your pokemon"
+  );
+
   return (
     <div className="container-fluid divPrincipale">
       <div className="d-flex justify-content-around">
         {index === 1 ? (
           <p />
         ) : (
-          <Link
-            to={`/products/${pokemon.pokedex_index - 1}`}
-            className="btn btn-sm"
-          >
+          <Link to={`/products/${pokemon.index - 1}`} className="btn btn-sm">
             <img
               className="oneProductBtn  d-md-none d-lg-none d-xl-none d-xxl-none"
               alt="bouton previous"
@@ -51,10 +84,7 @@ function OneProduct({ handlePanier }) {
         {index === 51 ? (
           <p />
         ) : (
-          <Link
-            to={`/products/${pokemon.pokedex_index + 1}`}
-            className="btn btn-sm"
-          >
+          <Link to={`/products/${pokemon.index + 1}`} className="btn btn-sm">
             <img
               className="oneProductBtn d-md-none d-lg-none d-xl-none d-xxl-none"
               alt="bouton next"
@@ -67,7 +97,7 @@ function OneProduct({ handlePanier }) {
         <div className="col-xs-0 col-sm-0 col-md-1 col-lg-1 d-flex align-items-center">
           {index > 1 && (
             <Link
-              to={`/products/${pokemon.pokedex_index - 1}`}
+              to={`/products/${pokemon.index - 1}`}
               className="btn d-none d-md-block d-lg-block d-xl-block"
             >
               <img
@@ -93,7 +123,7 @@ function OneProduct({ handlePanier }) {
             <button
               type="button"
               className="btn btn-warning shadow textRegular mt-1"
-              onClick={() => handlePanier(pokemon)}
+              onClick={() => addAndNotify()}
             >
               Add to cart
             </button>
@@ -101,51 +131,43 @@ function OneProduct({ handlePanier }) {
         </div>
         <div className="col-6 col-sm-6 col-md-5 col-lg-5 d-flex flex-column justify-content-around">
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
-            {type && type.secondary_type ? (
+            {secondaryType ? (
               <h2 className="text-center importantText">Types</h2>
             ) : (
               <h2 className="text-center importantText">Type</h2>
             )}
             <ul className=" list-group list-group-horizontal-sm justify-content-center align-items-center">
               <li
-                className={`list-group-item text-center mb-1 me-1 rounded textRegular typeAbilities text-white ${
-                  type && type.primary_type
-                }`}
+                className={`list-group-item text-center mb-1 me-1 rounded textRegular typeAbilities text-white ${primaryType}`}
               >
-                {letter(type && type.primary_type)}
+                {letter(primaryType)}
               </li>
-              {type && type.secondary_type && (
+              {secondaryType && (
                 <li
-                  className={`list-group-item text-center mb-1 me-1 textRegular rounded typeAbilities text-white ${
-                    type && type.secondary_type
-                  }`}
+                  className={`list-group-item text-center mb-1 me-1 textRegular rounded typeAbilities text-white ${secondaryType}`}
                 >
-                  {letter(type && type.secondary_type)}
+                  {letter(secondaryType)}
                 </li>
               )}
             </ul>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            {ability && ability.seconde_ability ? (
+            {secondeAbility ? (
               <h2 className="text-center importantText">Abilities</h2>
             ) : (
               <h2 className="text-center importantText">Ability</h2>
             )}
             <ul className="list-group list-group-horizontal-sm justify-content-center align-items-center">
               <li
-                className={`list-group-item p-0 mb-1 me-1 text-center pt-2 pb-2 rounded textRegular typeAbilities text-white ${
-                  type && type.primary_type
-                }`}
+                className={`list-group-item p-0 mb-1 me-1 text-center pt-2 pb-2 rounded textRegular typeAbilities text-white ${primaryType}`}
               >
-                {letter(ability && ability.first_ability)}
+                {letter(firstAbility)}
               </li>
-              {ability && ability.seconde_ability && (
+              {secondeAbility && (
                 <li
-                  className={`list-group-item p-0  mb-1 me-1 text-center pt-2 pb-2 rounded textRegular typeAbilities text-white ${
-                    type && type.primary_type
-                  }`}
+                  className={`list-group-item p-0  mb-1 me-1 text-center pt-2 pb-2 rounded textRegular typeAbilities text-white ${primaryType}`}
                 >
-                  {letter(ability && ability.seconde_ability)}
+                  {letter(secondeAbility)}
                 </li>
               )}
             </ul>
@@ -154,7 +176,7 @@ function OneProduct({ handlePanier }) {
         <div className="col-xs-0 col-sm-0 col-md-1 col-lg-1 d-flex align-items-center">
           {index < 51 && (
             <Link
-              to={`/products/${pokemon.pokedex_index + 1}`}
+              to={`/products/${pokemon.index + 1}`}
               className="btn d-none d-md-block d-lg-block d-xl-block"
             >
               <img className="oneProductBtn" alt="bouton next" src={img2} />
@@ -165,32 +187,20 @@ function OneProduct({ handlePanier }) {
       <div className="mt-4 border">
         <h2 className="text-center importantText">Stats</h2>
         <div className="row mt-4">
+          <PokemonStat type={primaryType} stat={attack} text="Attack" />
+          <PokemonStat type={primaryType} stat={defense} text="Defense" />
           <PokemonStat
-            type={type && type.primary_type}
-            stat={stats && stats.attack}
-            text="Attack"
-          />
-          <PokemonStat
-            type={type && type.primary_type}
-            stat={stats && stats.defense}
-            text="Defense"
-          />
-          <PokemonStat
-            type={type && type.primary_type}
-            stat={stats && stats.special_attack}
+            type={primaryType}
+            stat={specialAttack}
             text="Special Attack"
           />
           <PokemonStat
-            type={type && type.primary_type}
-            stat={stats && stats.special_defence}
+            type={primaryType}
+            stat={specialDefence}
             text="Special Defense"
           />
-          <PokemonStat
-            type={type && type.primary_type}
-            stat={stats && stats.speed}
-            text="Speed"
-          />
-          <PokemonStat type={type && type.primary_type} stat={hp} text="Life" />
+          <PokemonStat type={primaryType} stat={speed} text="Speed" />
+          <PokemonStat type={primaryType} stat={hp} text="Life" />
         </div>
       </div>
       <div className="mt-4">
@@ -201,6 +211,18 @@ function OneProduct({ handlePanier }) {
           <Avis />
         </div>
       </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </div>
   );
 }
